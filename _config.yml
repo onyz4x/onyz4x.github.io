@@ -98,6 +98,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
-  repository: https://github.com/onyz4x/onyz4x.github.io
+  type: git
+  repo: https://github.com/onyz4x/onyz4x.github.io
   branch: master
