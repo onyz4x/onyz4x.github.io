@@ -172,10 +172,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-04-23 21:25:16 / 修改时间：23:25:43" itemprop="dateCreated datePublished" datetime="2020-04-23T21:25:16+08:00">2020-04-23</time>
+              <time title="创建时间：2020-04-23 21:25:16" itemprop="dateCreated datePublished" datetime="2020-04-23T21:25:16+08:00">2020-04-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-24 02:02:00" itemprop="dateModified" datetime="2020-04-24T02:02:00+08:00">2020-04-24</time>
+              </span>
 
           
 
@@ -197,39 +203,38 @@
 <p>生成完成后会出现一个唯一 token，请记录下来，这个 token 在页面刷新后就会消失并且不能找回</p>
 <p><img src="https://cdn.jsdelivr.net/gh/onyz4x/PicGoBed/images/20200423224623.png" alt="20200423224623"></p>
 <h2 id="vscode-的-PicGo-安装和配置"><a href="#vscode-的-PicGo-安装和配置" class="headerlink" title="vscode 的 PicGo 安装和配置"></a>vscode 的 PicGo 安装和配置</h2><h3 id="安装-PicGo-扩展"><a href="#安装-PicGo-扩展" class="headerlink" title="安装 PicGo 扩展"></a>安装 PicGo 扩展</h3><p><img src="https://cdn.jsdelivr.net/gh/onyz4x/PicGoBed/images/20200423224945.png" alt="20200423224945"></p>
-<h3 id="配置-PicGo-扩展"><a href="#配置-PicGo-扩展" class="headerlink" title="配置 PicGo 扩展"></a>配置 PicGo 扩展</h3><p>打开 vscode 的设置，搜索<code>picgo</code>, 定位到如下设置, 按照图片中的说明来设置,其中需要注意的是自定义url,在这里我们就用到了jsdelivr的免费CDN支持,规则就是<code>https://cdn.jsdelivr.net/gh/&lt;username&gt;/&lt;repo&gt;</code>,如果你的仓库使用release来区分不同版本的话可以使用<code>https://cdn.jsdelivr.net/gh/&lt;username&gt;/&lt;repo&gt;@&lt;release version&gt;</code>规则来导入</p>
+<h3 id="配置-PicGo-扩展"><a href="#配置-PicGo-扩展" class="headerlink" title="配置 PicGo 扩展"></a>配置 PicGo 扩展</h3><p>打开 vscode 的设置，搜索<code>picgo</code>, 定位到如下设置, 按照图片中的说明来设置,其中需要注意的是自定义 url,在这里我们就用到了 jsdelivr 的免费 CDN 支持,规则就是<code>https://cdn.jsdelivr.net/gh/&lt;username&gt;/&lt;repo&gt;</code>,如果你的仓库使用 release 来区分不同版本的话可以使用<code>https://cdn.jsdelivr.net/gh/&lt;username&gt;/&lt;repo&gt;@&lt;release version&gt;</code>规则来导入</p>
 <p><img src="https://cdn.jsdelivr.net/gh/onyz4x/PicGoBed/images/20200423230532.png" alt="20200423230532"></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>以上配置完成后,我们就能愉快的使用PicGo来为我们markDown自动上传图片并生成代码了,我们看一下picgo扩展的使用方法</p>
-<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><details>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>以上配置完成后,我们就能愉快的使用 PicGo 来为我们 markDown 自动上传图片并生成代码了,我们看一下 picgo 扩展的使用方法</p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><details open>
 <summary>从剪贴板上传图片</summary>
 <img src="https://i.loli.net/2019/04/09/5cac17d2d2265.gif" alt="clipboard.gif">
 </details>
 
-<details>
+<details open>
 <summary>从文件管理器中上传图片</summary>
 <img src="https://i.loli.net/2019/04/09/5cac17eea0d65.gif" alt="explorer.gif">
 </details>
 
-<details>
+<details open>
 <summary>从input box中上传图片</summary>
 <img src="https://i.loli.net/2019/04/09/5cac17fe52a86.gif" alt="input box.gif">
 </details>
 
-<details>
+<details open>
 <summary>使用选中的文字作为上传图片的文件名</summary>
 <img src="https://i.loli.net/2019/04/09/5cac180fb1dc7.gif" alt="selection.gif">
-<b>Notice: These characters: <code>\$</code>, <code>:</code>, <code>/</code>, <code>?</code> and newline will be ignored in the image name. </b>(Because they are invalid for file names.)
+<b>注意: 这些字符: <code>\$</code>, <code>:</code>, <code>/</code>, <code>?</code> 和换行将会在图片名中被忽略 . </b>(Because they are invalid for file names.)
 </details>
-
 
 <h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p><strong>You can change all the shortcuts below as you wish.</strong></p>
 <table>
 <thead>
 <tr>
-<th>OS</th>
-<th>Uploading an image from clipboard</th>
-<th>Uploading images from explorer</th>
-<th>Uploading an image from input box</th>
+<th>操作系统</th>
+<th>从剪贴板上传图片</th>
+<th>从文件管理器中上传图片</th>
+<th>从 input box 中上传图片</th>
 </tr>
 </thead>
 <tbody><tr>
