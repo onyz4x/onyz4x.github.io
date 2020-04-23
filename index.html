@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-23 21:25:16 / 修改时间：21:52:03" itemprop="dateCreated datePublished" datetime="2020-04-23T21:25:16+08:00">2020-04-23</time>
+              <time title="创建时间：2020-04-23 21:25:16 / 修改时间：23:25:43" itemprop="dateCreated datePublished" datetime="2020-04-23T21:25:16+08:00">2020-04-23</time>
             </span>
 
           
@@ -188,10 +188,63 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用Hexo打造个人博客的时候你总会发现需要一个图床，免费又限制少的当属GitHub，当然免费存在的问题，GitHub的问题就是访问速度慢，这时候使用jsDelivr作为GitHub的免费CDN解决方案，就能打造一个即快速又免费的图床了，结合vscode的扩展PicGo，就能快速高效的传图，并生成markdown的图片代码</p>
-<h2 id="GitHub设置"><a href="#GitHub设置" class="headerlink" title="GitHub设置"></a>GitHub设置</h2><h3 id="创建一个仓库"><a href="#创建一个仓库" class="headerlink" title="创建一个仓库"></a>创建一个仓库</h3><p>例如我创建了一个名为<code>PicGoBed</code>的仓库</p>
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用 Hexo 打造个人博客的时候你总会发现需要一个图床，免费又限制少的当属 GitHub，当然免费存在的问题，GitHub 的问题就是访问速度慢，这时候使用 jsDelivr 作为 GitHub 的免费 CDN 解决方案，就能打造一个即快速又免费的图床了，结合 vscode 的扩展 PicGo，就能快速高效的传图，并生成 markdown 的图片代码</p>
+<h2 id="GitHub-设置"><a href="#GitHub-设置" class="headerlink" title="GitHub 设置"></a>GitHub 设置</h2><h3 id="创建一个仓库"><a href="#创建一个仓库" class="headerlink" title="创建一个仓库"></a>创建一个仓库</h3><p>例如我们创建了一个名为<code>PicGoBed</code>的仓库，用来存放我们的图片，注意仓库必须是 public 的，这样才能作为图库访问</p>
 <p><img src="https://cdn.jsdelivr.net/gh/onyz4x/PicGoBed/images/20200423213623.png" alt="20200423213623"></p>
-<p>1</p>
+<h3 id="生成-GitHub-的-token"><a href="#生成-GitHub-的-token" class="headerlink" title="生成 GitHub 的 token"></a>生成 GitHub 的 token</h3><h4 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h4><p>生成 token 的目的是为了让 PicGo 能有访问我们仓库的权限</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>进入你 GitHub 的 settings（注意是账号的 settings 不是你仓库的 settings），依次进入<code>Settings &gt; Developer settings &gt; Personal access tokens</code>，点击<code>Generate new token</code>进入页面，填写 Note，勾选 repo 的权限，然后生成 token。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/onyz4x/PicGoBed/images/20200423224204.png" alt="20200423224204"></p>
+<p>生成完成后会出现一个唯一 token，请记录下来，这个 token 在页面刷新后就会消失并且不能找回</p>
+<p><img src="https://cdn.jsdelivr.net/gh/onyz4x/PicGoBed/images/20200423224623.png" alt="20200423224623"></p>
+<h2 id="vscode-的-PicGo-安装和配置"><a href="#vscode-的-PicGo-安装和配置" class="headerlink" title="vscode 的 PicGo 安装和配置"></a>vscode 的 PicGo 安装和配置</h2><h3 id="安装-PicGo-扩展"><a href="#安装-PicGo-扩展" class="headerlink" title="安装 PicGo 扩展"></a>安装 PicGo 扩展</h3><p><img src="https://cdn.jsdelivr.net/gh/onyz4x/PicGoBed/images/20200423224945.png" alt="20200423224945"></p>
+<h3 id="配置-PicGo-扩展"><a href="#配置-PicGo-扩展" class="headerlink" title="配置 PicGo 扩展"></a>配置 PicGo 扩展</h3><p>打开 vscode 的设置，搜索<code>picgo</code>, 定位到如下设置, 按照图片中的说明来设置,其中需要注意的是自定义url,在这里我们就用到了jsdelivr的免费CDN支持,规则就是<code>https://cdn.jsdelivr.net/gh/&lt;username&gt;/&lt;repo&gt;</code>,如果你的仓库使用release来区分不同版本的话可以使用<code>https://cdn.jsdelivr.net/gh/&lt;username&gt;/&lt;repo&gt;@&lt;release version&gt;</code>规则来导入</p>
+<p><img src="https://cdn.jsdelivr.net/gh/onyz4x/PicGoBed/images/20200423230532.png" alt="20200423230532"></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>以上配置完成后,我们就能愉快的使用PicGo来为我们markDown自动上传图片并生成代码了,我们看一下picgo扩展的使用方法</p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><details>
+<summary>从剪贴板上传图片</summary>
+<img src="https://i.loli.net/2019/04/09/5cac17d2d2265.gif" alt="clipboard.gif">
+</details>
+
+<details>
+<summary>从文件管理器中上传图片</summary>
+<img src="https://i.loli.net/2019/04/09/5cac17eea0d65.gif" alt="explorer.gif">
+</details>
+
+<details>
+<summary>从input box中上传图片</summary>
+<img src="https://i.loli.net/2019/04/09/5cac17fe52a86.gif" alt="input box.gif">
+</details>
+
+<details>
+<summary>使用选中的文字作为上传图片的文件名</summary>
+<img src="https://i.loli.net/2019/04/09/5cac180fb1dc7.gif" alt="selection.gif">
+<b>Notice: These characters: <code>\$</code>, <code>:</code>, <code>/</code>, <code>?</code> and newline will be ignored in the image name. </b>(Because they are invalid for file names.)
+</details>
+
+
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p><strong>You can change all the shortcuts below as you wish.</strong></p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Uploading an image from clipboard</th>
+<th>Uploading images from explorer</th>
+<th>Uploading an image from input box</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Windows/Unix</td>
+<td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>U</kbd></td>
+<td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd></td>
+<td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>O</kbd></td>
+</tr>
+<tr>
+<td>OsX</td>
+<td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>U</kbd></td>
+<td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>E</kbd></td>
+<td><kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>O</kbd></td>
+</tr>
+</tbody></table>
 
       
     </div>
@@ -236,7 +289,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-23 14:37:19 / 修改时间：21:01:05" itemprop="dateCreated datePublished" datetime="2020-04-23T14:37:19+08:00">2020-04-23</time>
+              <time title="创建时间：2020-04-23 14:37:19 / 修改时间：22:52:43" itemprop="dateCreated datePublished" datetime="2020-04-23T14:37:19+08:00">2020-04-23</time>
             </span>
 
           
@@ -250,29 +303,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>因为本人是前端开发人员，已经在用webstorm，不想在安装一个Android studio这么重的IDE，会导致卡顿，所以想使用vscode安装flutter插件作为开发工具，只安装android-sdk</p>
-<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p>首先准备一个文件夹专门用来放sdk，命名<code>Android</code>，把所有环境有关的sdk都可以装到这里方便管理。</p>
-<p>注意：Android文件夹不要使用<code>C:\Program Files\</code>这种需要权限的路径</p>
+          <p>因为本人是前端开发人员，已经在用 webstorm，不想在安装一个 Android studio 这么重的 IDE，会导致卡顿，所以想使用 vscode 安装 flutter 插件作为开发工具，只安装 android-sdk</p>
+<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p>首先准备一个文件夹专门用来放 sdk，命名<code>Android</code>，把所有环境有关的 sdk 都可以装到这里方便管理。</p>
+<p>注意：Android 文件夹不要使用<code>C:\Program Files\</code>这种需要权限的路径</p>
 <h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p><a href="https://github.com/AdoptOpenJDK/openjdk8-binaries/releases" target="_blank" rel="noopener">https://github.com/AdoptOpenJDK/openjdk8-binaries/releases</a></p>
-<p>选择OpenJDK8U-jdk_x64_windows_hotspot_8u252b09.msi或者OpenJDK8U-jdk_x64_windows_hotspot_8u252b09.zip下载</p>
-<p>msi安装的时候选中生成环境变量JAVA_HOME；zip格式的可以解压到<code>Android</code>目录，然后自己去添加环境变量JAVA_HOME</p>
+<p>选择 OpenJDK8U-jdk_x64_windows_hotspot_8u252b09.msi 或者 OpenJDK8U-jdk_x64_windows_hotspot_8u252b09.zip 下载</p>
+<p>msi 安装的时候选中生成环境变量 JAVA_HOME；zip 格式的可以解压到<code>Android</code>目录，然后自己去添加环境变量 JAVA_HOME</p>
 <h3 id="Flutter-Sdk"><a href="#Flutter-Sdk" class="headerlink" title="Flutter Sdk"></a>Flutter Sdk</h3><p><a href="https://flutter.dev/docs/get-started/install/windows#get-the-flutter-sdk" target="_blank" rel="noopener">https://flutter.dev/docs/get-started/install/windows#get-the-flutter-sdk</a></p>
-<p>flutter官方文档，注意路径为<code>Android/flutter</code></p>
+<p>flutter 官方文档，注意路径为<code>Android/flutter</code></p>
 <h3 id="Android-SDK"><a href="#Android-SDK" class="headerlink" title="Android SDK"></a>Android SDK</h3><h4 id="1-Android-command-tools-Android-sdk-tool"><a href="#1-Android-command-tools-Android-sdk-tool" class="headerlink" title="1. Android command tools(Android-sdk-tool)"></a>1. Android command tools(Android-sdk-tool)</h4><p><a href="https://developer.android.com/studio#command-tools" target="_blank" rel="noopener">https://developer.android.com/studio#command-tools</a></p>
 <h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><blockquote>
-<p>这里有个巨大的坑， 我下载的<code>commandlinetools-win-6200805_latest.zip</code>解压<code>tools</code>文件放到<code>Android</code>目录下后，环境变量中添加<code>Android/tools/bin</code>运行sdkmanager会不正常，原因是新版的路径必须是<code>Android\cmdline-tools\latest</code>下，但是<code>Android\cmdline-tools\latest</code>这个路径会导致另外一个问题<code>flutter doctor --licenses</code>命令在解决授权问题的时候找不到sdkmanger。这个坑以后flutter更新版本后可能会解决掉，但是现在只能work around</p>
+<p>这里有个巨大的坑， 我下载的<code>commandlinetools-win-6200805_latest.zip</code>解压<code>tools</code>文件放到<code>Android</code>目录下后，环境变量中添加<code>Android/tools/bin</code>运行 sdkmanager 会不正常，原因是新版的路径必须是<code>Android\cmdline-tools\latest</code>下，但是<code>Android\cmdline-tools\latest</code>这个路径会导致另外一个问题<code>flutter doctor --licenses</code>命令在解决授权问题的时候找不到 sdkmanger。这个坑以后 flutter 更新版本后可能会解决掉，但是现在只能 work around</p>
 </blockquote>
 <h5 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h5><p>下载老版本<code>android-sdk-26-1-1.zip</code>，然后解压到<code>Android</code>目录下，然后将<code>Android\tools\bin</code>添加到<code>path</code>环境变量，设置环境变量<code>ANDROID_HOME</code>的地址是<code>Android</code>目录</p>
-<h4 id="2-通过sdkmanager安装其他Android-SDK工具"><a href="#2-通过sdkmanager安装其他Android-SDK工具" class="headerlink" title="2. 通过sdkmanager安装其他Android SDK工具"></a>2. 通过sdkmanager安装其他Android SDK工具</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sdkmanager “system-images;android-27;default;x86_64”</span><br><span class="line">sdkmanager “platform-tools”</span><br><span class="line">sdkmanager “build-tools;27.0.3”</span><br><span class="line">sdkmanager “platforms;android-27”</span><br><span class="line">sdkmanager emulator</span><br></pre></td></tr></table></figure>
+<h4 id="2-通过-sdkmanager-安装其他-Android-SDK-工具"><a href="#2-通过-sdkmanager-安装其他-Android-SDK-工具" class="headerlink" title="2. 通过 sdkmanager 安装其他 Android SDK 工具"></a>2. 通过 sdkmanager 安装其他 Android SDK 工具</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sdkmanager “system-images;android-27;default;x86_64”</span><br><span class="line">sdkmanager “platform-tools”</span><br><span class="line">sdkmanager “build-tools;27.0.3”</span><br><span class="line">sdkmanager “platforms;android-27”</span><br><span class="line">sdkmanager emulator</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>工具的具体版本可以通过 <code>sdkmanager --list</code>命令查询，然后安装对应的最新版本</p>
 </blockquote>
-<h2 id="检查运行环境"><a href="#检查运行环境" class="headerlink" title="检查运行环境"></a>检查运行环境</h2><p>上面步骤如果没有出现错误，那么恭喜你flutter应该已经安装好了。<br>为了验证环境是否正常，flutter提供了一个命令<code>flutter doctor</code>去检查环境，(可以在vscode中<code>ctrl+shift+p</code>输入<code>flutter</code>选择<code>flutter doctor</code>)<br>检查结果中可以忽略Android SDK没有安装的警告，你只需要安装vscode和flutter插件，<br>连接上手机（打开usb调试，允许usb安装应用）</p>
-<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>在vscode中使用<code>ctrl+shift+p</code>输入<code>flutter</code>使用<code>Flutter: New project</code>来新建一个项目。<br>输入项目名后，flutter会自动开始初始化项目。<br>初始化完成后直接按F5即可运行<br>手机会提示安装一个应用，完成后自动打开就能看到一个点击计数的app了</p>
+<h2 id="检查运行环境"><a href="#检查运行环境" class="headerlink" title="检查运行环境"></a>检查运行环境</h2><p>上面步骤如果没有出现错误，那么恭喜你 flutter 应该已经安装好了。<br>为了验证环境是否正常，flutter 提供了一个命令<code>flutter doctor</code>去检查环境，(可以在 vscode 中<code>ctrl+shift+p</code>输入<code>flutter</code>选择<code>flutter doctor</code>)<br>检查结果中可以忽略 Android SDK 没有安装的警告，你只需要安装 vscode 和 flutter 插件，<br>连接上手机（打开 usb 调试，允许 usb 安装应用）</p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>在 vscode 中使用<code>ctrl+shift+p</code>输入<code>flutter</code>使用<code>Flutter: New project</code>来新建一个项目。<br>输入项目名后，flutter 会自动开始初始化项目。<br>初始化完成后直接按 F5 即可运行<br>手机会提示安装一个应用，完成后自动打开就能看到一个点击计数的 app 了</p>
 <p>注意：</p>
 <blockquote>
-<p>运行中如果长时间卡在Running Gradle task ‘assembleDebug’…。<br>是因为gradle国内下载太慢，解决办法是自己下载，然后放到gradle的下载目录里，让它接着执行之后的操作。<br>gradle的目录是类似<code>C:\Users\xxxx\.gradle\wrapper\dists\gradle-5.6.2-all\9st6wgf78h16so49nn74lgtbb</code>。<br>下载对应版本的zip直接放到目录中即可，例：<code>gradle-5.6.2-all.zip</code></p>
+<p>运行中如果长时间卡在 Running Gradle task ‘assembleDebug’…。<br>是因为 gradle 国内下载太慢，解决办法是自己下载，然后放到 gradle 的下载目录里，让它接着执行之后的操作。<br>gradle 的目录是类似<code>C:\Users\xxxx\.gradle\wrapper\dists\gradle-5.6.2-all\9st6wgf78h16so49nn74lgtbb</code>。<br>下载对应版本的 zip 直接放到目录中即可，例：<code>gradle-5.6.2-all.zip</code></p>
 </blockquote>
 
       
@@ -324,7 +377,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-23 17:23:14" itemprop="dateModified" datetime="2020-04-23T17:23:14+08:00">2020-04-23</time>
+                <time title="修改时间：2020-04-23 22:29:38" itemprop="dateModified" datetime="2020-04-23T22:29:38+08:00">2020-04-23</time>
               </span>
 
           
@@ -338,24 +391,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先，写这篇代码规范是为了我自己在以后的项目中方便引用，让前端人员统一标准，方便在开发中保持代码的一致性，HTML和CSS的规范参照 <a href="https://codeguide.bootcss.com/" target="_blank" rel="noopener">bootstrap编码规范</a> ，以下多为JS规则</p>
-<p>eslint 统一代码规范，通常推荐项目框架默认的eslint设置</p>
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先，写这篇代码规范是为了我自己在以后的项目中方便引用，让前端人员统一标准，方便在开发中保持代码的一致性，HTML 和 CSS 的规范参照 <a href="https://codeguide.bootcss.com/" target="_blank" rel="noopener">bootstrap 编码规范</a> ，以下多为 JS 规则</p>
+<p>eslint 统一代码规范，通常推荐项目框架默认的 eslint 设置</p>
 <h2 id="黄金定律"><a href="#黄金定律" class="headerlink" title="黄金定律"></a>黄金定律</h2><p>永远遵循同一套编码规范 – 可以是这里列出的，也可以是你自己总结的。如果你发现本规范中有任何错误，敬请指正。通过 open an issue on GitHub 为本规范添加内容或贡献力量。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不管有多少人共同参与同一项目，一定要确保每一行代码都像是同一个人编写的。</span><br></pre></td></tr></table></figure>
 
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>HTML,CSS和Javascript都用两个空格来代替制表符（tab）；<br>webstorm设置HTML和CSS格式化的方法：File-Settings,Editor-CodeStyle-HTML(或者CSS),在Tabs and Indents选项卡下把TabSize和Indent的值均改为2；<br>webstorm格式化快捷键Ctrl+Alt+L;<br>命名规则<br>文件命名规则：小写单英文单词，多单词使用“-”连接:</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>HTML,CSS 和 Javascript 都用两个空格来代替制表符（tab）；<br>webstorm 设置 HTML 和 CSS 格式化的方法：File-Settings,Editor-CodeStyle-HTML(或者 CSS),在 Tabs and Indents 选项卡下把 TabSize 和 Indent 的值均改为 2；<br>webstorm 格式化快捷键 Ctrl+Alt+L;<br>命名规则<br>文件命名规则：小写单英文单词，多单词使用“-”连接:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">index.html</span><br><span class="line">task-bg.jpg</span><br><span class="line">title-bg.png</span><br><span class="line">project-task.css</span><br><span class="line">project-ctrl.js</span><br><span class="line">projectCtrl.js</span><br></pre></td></tr></table></figure>
-<p>Css类名命名规则：英文单词，多单词使用“-”连接</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"task-list-title"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">"task-list-title-h3"</span>&gt;</span></span><br><span class="line">       这里是标题</span><br><span class="line">   <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">   <span class="selector-class">.task-list-title</span>&#123;</span></span><br><span class="line"><span class="css">       <span class="selector-tag">float</span><span class="selector-pseudo">:left</span>;</span></span><br><span class="line">   &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Javasctipt命名规则：英文单词，多单词使用小驼峰</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$scope.taskOpen = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $scope.taskOpenState = <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>代码格式化<br>把webstorm的格式化换行去掉，设置方法：找到File-Settings,Editor-General-Appearance，去掉Show right margin(configured in Code Style options)的勾选</p>
-<p>其他书写规范<br>当<a>标签中href属性不使用时，不用#作为填充，使用空白来填充,例如：</p>
+
+<p>Css 类名命名规则：英文单词，多单词使用“-”连接</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"task-list-title"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">"task-list-title-h3"</span>&gt;</span></span><br><span class="line">    这里是标题</span><br><span class="line">  <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-class">.task-list-title</span> &#123;</span></span><br><span class="line">    float: left;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Javasctipt 命名规则：英文单词，多单词使用小驼峰</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$scope.taskOpen = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  $scope.taskOpenState = <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>代码格式化<br>把 webstorm 的格式化换行去掉，设置方法：找到 File-Settings,Editor-General-Appearance，去掉 Show right margin(configured in Code Style options)的勾选</p>
+<p>其他书写规范<br>当<a>标签中 href 属性不使用时，不用#作为填充，使用空白来填充,例如：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:"</span> <span class="attr">ng-click</span>=<span class="string">"openPopbox()"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>注释<br>首先代码注释永远不嫌多，不管是不是给别人看或者协同开发，注释必须尽可能的详尽，就算是你自己写的代码也可能时间太久或者逻辑太复杂而忘记具体功能，所以一定要写注释；<br>其次注释能帮助你快速理解代码所做的事情，看一段有注释的代码和一段没有注释的代码是两个概念，前者可以让你很快的理解代码的用途和方法，后者需要自己慢慢分析，而时间就是开发成本；<br>再次注释能帮你更好的整理你的逻辑，在写注释的时候，往往能发现一些自己忽略掉的一些东西，减少挖坑的次数；</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Component section heading</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">.element &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Component section heading</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * Sometimes you need to include optional context for the entire component. Do that up here if it's important enough.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">.element &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Contextual sub-component or modifer */</span></span><br><span class="line">.element-heading &#123; ... &#125;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Component section heading</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.element</span> &#123;</span><br><span class="line">  ...;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Component section heading</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * Sometimes you need to include optional context for the entire component. Do that up here if it's important enough.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.element</span> &#123;</span><br><span class="line">  ...;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Contextual sub-component or modifer */</span></span><br><span class="line"><span class="selector-class">.element-heading</span> &#123;</span><br><span class="line">  ...;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -718,7 +773,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-23 17:34:04" itemprop="dateModified" datetime="2020-04-23T17:34:04+08:00">2020-04-23</time>
+                <time title="修改时间：2020-04-23 22:52:43" itemprop="dateModified" datetime="2020-04-23T22:52:43+08:00">2020-04-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -741,8 +796,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>让我们从零开始使用JavaScript建立一个超简单的Angular2应用，还可以使用TypeScript和Dart</p>
-<h2 id="看看运行效果"><a href="#看看运行效果" class="headerlink" title="看看运行效果"></a>看看运行效果</h2><p>运行<a href="https://angular.io/resources/live-examples/quickstart/js/plnkr.html/" target="_blank" rel="noopener">在线示例</a>能快速看到看到 Angular 2应用的实例，运行结果如下图：</p>
+          <p>让我们从零开始使用 JavaScript 建立一个超简单的 Angular2 应用，还可以使用 TypeScript 和 Dart</p>
+<h2 id="看看运行效果"><a href="#看看运行效果" class="headerlink" title="看看运行效果"></a>看看运行效果</h2><p>运行<a href="https://angular.io/resources/live-examples/quickstart/js/plnkr.html/" target="_blank" rel="noopener">在线示例</a>能快速看到看到 Angular 2 应用的实例，运行结果如下图：</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/04/25/2016-04-25-angularjs2-quick-start/#more" rel="contents">
@@ -800,7 +855,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-23 17:31:34" itemprop="dateModified" datetime="2020-04-23T17:31:34+08:00">2020-04-23</time>
+                <time title="修改时间：2020-04-23 22:29:54" itemprop="dateModified" datetime="2020-04-23T22:29:54+08:00">2020-04-23</time>
               </span>
 
           
@@ -814,17 +869,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在项目中遇到需要使用标签属性<code>contenteditable</code>来替代<code>&lt;textarea&gt;</code>，实现输入内容的自动高度，但是<code>&lt;div&gt;</code>或者<code>&lt;p&gt;</code>标签并不是一个输入控件，不能直接被ngModel绑定，这个时候就需要把contenteditable做成一个directive来实现双向绑定：</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">app.directive(<span class="string">'contenteditable'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="built_in">require</span>: <span class="string">'ngModel'</span>,</span><br><span class="line">        link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, element, attrs, ctrl</span>) </span>&#123;</span><br><span class="line">            <span class="comment">/*输入回车的时候会转义成&lt;br&gt;被提交，所以去掉回车的输入*/</span></span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">deleteBr</span>(<span class="params">sHtml</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> sHtml.replace(<span class="regexp">/&lt;br&gt;/g</span>, <span class="string">""</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// view -&gt; model</span></span><br><span class="line">            element.bind(<span class="string">'input'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                scope.$apply(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                    element.html(deleteBr(element.html()));</span><br><span class="line">                    ctrl.$setViewValue(element.html());</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// model -&gt; view</span></span><br><span class="line">            ctrl.$render = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                element.html(ctrl.$viewValue);</span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// load init value from DOM</span></span><br><span class="line">            ctrl.$render();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在项目中遇到需要使用标签属性<code>contenteditable</code>来替代<code>&lt;textarea&gt;</code>，实现输入内容的自动高度，但是<code>&lt;div&gt;</code>或者<code>&lt;p&gt;</code>标签并不是一个输入控件，不能直接被 ngModel 绑定，这个时候就需要把 contenteditable 做成一个 directive 来实现双向绑定：</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">app.directive(<span class="string">"contenteditable"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="built_in">require</span>: <span class="string">"ngModel"</span>,</span><br><span class="line">    link: <span class="function"><span class="keyword">function</span> (<span class="params">scope, element, attrs, ctrl</span>) </span>&#123;</span><br><span class="line">      <span class="comment">/*输入回车的时候会转义成&lt;br&gt;被提交，所以去掉回车的输入*/</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">deleteBr</span>(<span class="params">sHtml</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> sHtml.replace(<span class="regexp">/&lt;br&gt;/g</span>, <span class="string">""</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// view -&gt; model</span></span><br><span class="line">      element.bind(<span class="string">"input"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        scope.$apply(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">          element.html(deleteBr(element.html()));</span><br><span class="line">          ctrl.$setViewValue(element.html());</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// model -&gt; view</span></span><br><span class="line">      ctrl.$render = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        element.html(ctrl.$viewValue);</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// load init value from DOM</span></span><br><span class="line">      ctrl.$render();</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>在div中输入回车是会被转义成<code>&lt;br&gt;</code>，而在实际使用中可能需要禁止回车，所以在directive中需要把回车产生的<code>&lt;br&gt;</code>过滤掉；</li>
-<li>在html中需要设置<code>contenteditable=&quot;plaintext-only&quot;</code>控制输入的内容为纯文本，因为复制过来的一些内容可能会被带上一些文字样式；</li>
-<li>在model中输入&lt;&gt; 会被转义，解决办法是在controller里面先过滤一遍数据（输出的时候也需要过滤一次）</li>
+<li>在 div 中输入回车是会被转义成<code>&lt;br&gt;</code>，而在实际使用中可能需要禁止回车，所以在 directive 中需要把回车产生的<code>&lt;br&gt;</code>过滤掉；</li>
+<li>在 html 中需要设置<code>contenteditable=&quot;plaintext-only&quot;</code>控制输入的内容为纯文本，因为复制过来的一些内容可能会被带上一些文字样式；</li>
+<li>在 model 中输入&lt;&gt;  会被转义，解决办法是在 controller 里面先过滤一遍数据（输出的时候也需要过滤一次）</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">html2Escape</span>(<span class="params">sHtml</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> sHtml.replace(<span class="regexp">/[&lt;&gt;&amp;"]/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">c</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;<span class="string">'&lt;'</span>: <span class="string">'&amp;lt;'</span>, <span class="string">'&gt;'</span>: <span class="string">'&amp;gt;'</span>, <span class="string">'&amp;'</span>: <span class="string">'&amp;amp;'</span>, <span class="string">'"'</span>: <span class="string">'&amp;quot;'</span>&#125;[c];</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">$scope.text= html2Escape($scope.text)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">html2Escape</span>(<span class="params">sHtml</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> sHtml.replace(<span class="regexp">/[&lt;&gt;&amp;"]/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">c</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123; <span class="string">"&lt;"</span>: <span class="string">"&amp;lt;"</span>, <span class="string">"&gt;"</span>: <span class="string">"&amp;gt;"</span>, <span class="string">"&amp;"</span>: <span class="string">"&amp;amp;"</span>, <span class="string">'"'</span>: <span class="string">"&amp;quot;"</span> &#125;[c];</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">$scope.text = html2Escape($scope.text);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -875,7 +928,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-23 17:32:18" itemprop="dateModified" datetime="2020-04-23T17:32:18+08:00">2020-04-23</time>
+                <time title="修改时间：2020-04-23 22:52:43" itemprop="dateModified" datetime="2020-04-23T22:52:43+08:00">2020-04-23</time>
               </span>
 
           
@@ -889,11 +942,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这个功能在ng-repeat中过滤内容的时候会用到</p>
-<p>这个filter简单来说就是同时过滤两个字段或者多个字段达到我们想要的实际效果：文字和拼音双过滤；</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</p></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">keeApp.filter(<span class="string">'filterPinyin'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">inputArray,value</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> array = [];    <span class="comment">//定义返回的新数组；</span></span><br><span class="line">        <span class="keyword">if</span>(value==<span class="literal">undefined</span>||value==<span class="literal">null</span>)&#123;</span><br><span class="line">            array=inputArray;    <span class="comment">//当过滤条件为空的时候返回全部的内容；</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;inputArray.length;i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(inputArray[i].aliasName.indexOf(value)!= <span class="number">-1</span>)&#123;</span><br><span class="line">                    array.push(inputArray[i]);<span class="comment">//过滤第一个字段，如果不符合条件则判断第二个字段</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">if</span>(inputArray[i].spelling.indexOf(value)!= <span class="number">-1</span>)&#123;</span><br><span class="line">                        array.push(inputArray[i]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> array;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这个功能在 ng-repeat 中过滤内容的时候会用到</p>
+<p>这个 filter 简单来说就是同时过滤两个字段或者多个字段达到我们想要的实际效果：文字和拼音双过滤；</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</p></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">keeApp.filter(<span class="string">"filterPinyin"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">inputArray, value</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> array = []; <span class="comment">//定义返回的新数组；</span></span><br><span class="line">    <span class="keyword">if</span> (value == <span class="literal">undefined</span> || value == <span class="literal">null</span>) &#123;</span><br><span class="line">      array = inputArray; <span class="comment">//当过滤条件为空的时候返回全部的内容；</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; inputArray.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (inputArray[i].aliasName.indexOf(value) != <span class="number">-1</span>) &#123;</span><br><span class="line">          array.push(inputArray[i]); <span class="comment">//过滤第一个字段，如果不符合条件则判断第二个字段</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">if</span> (inputArray[i].spelling.indexOf(value) != <span class="number">-1</span>) &#123;</span><br><span class="line">            array.push(inputArray[i]);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
       
     </div>

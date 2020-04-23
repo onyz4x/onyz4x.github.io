@@ -20,16 +20,16 @@
     var CONFIG = {"hostname":"onyz4x.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="让我们从零开始使用JavaScript建立一个超简单的Angular2应用，还可以使用TypeScript和Dart 看看运行效果运行在线示例能快速看到看到 Angular 2应用的实例，运行结果如下图：">
+  <meta name="description" content="让我们从零开始使用 JavaScript 建立一个超简单的 Angular2 应用，还可以使用 TypeScript 和 Dart 看看运行效果运行在线示例能快速看到看到 Angular 2 应用的实例，运行结果如下图：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular2：5分钟快速入门 (for javascript)">
 <meta property="og:url" content="https://onyz4x.github.io/2016/04/25/2016-04-25-angularjs2-quick-start/index.html">
 <meta property="og:site_name" content="渐忘症患者的Blog">
-<meta property="og:description" content="让我们从零开始使用JavaScript建立一个超简单的Angular2应用，还可以使用TypeScript和Dart 看看运行效果运行在线示例能快速看到看到 Angular 2应用的实例，运行结果如下图：">
+<meta property="og:description" content="让我们从零开始使用 JavaScript 建立一个超简单的 Angular2 应用，还可以使用 TypeScript 和 Dart 看看运行效果运行在线示例能快速看到看到 Angular 2 应用的实例，运行结果如下图：">
 <meta property="og:image" content="http://www.ziwuo.com/wp-content/uploads/2016/04/QQ%E6%88%AA%E5%9B%BE20160505105117.jpg">
 <meta property="og:image" content="http://www.ziwuo.com/wp-content/uploads/2016/04/QQ%E6%88%AA%E5%9B%BE20160504153700.jpg">
 <meta property="article:published_time" content="2016-04-25T10:05:14.000Z">
-<meta property="article:modified_time" content="2020-04-23T09:34:04.234Z">
+<meta property="article:modified_time" content="2020-04-23T14:52:43.869Z">
 <meta property="article:author" content="渐忘症患者">
 <meta property="article:tag" content="Angular2">
 <meta name="twitter:card" content="summary">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-23 17:34:04" itemprop="dateModified" datetime="2020-04-23T17:34:04+08:00">2020-04-23</time>
+                <time title="修改时间：2020-04-23 22:52:43" itemprop="dateModified" datetime="2020-04-23T22:52:43+08:00">2020-04-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -211,17 +211,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>让我们从零开始使用JavaScript建立一个超简单的Angular2应用，还可以使用TypeScript和Dart</p>
-<h2 id="看看运行效果"><a href="#看看运行效果" class="headerlink" title="看看运行效果"></a>看看运行效果</h2><p>运行<a href="https://angular.io/resources/live-examples/quickstart/js/plnkr.html/" target="_blank" rel="noopener">在线示例</a>能快速看到看到 Angular 2应用的实例，运行结果如下图：</p>
+        <p>让我们从零开始使用 JavaScript 建立一个超简单的 Angular2 应用，还可以使用 TypeScript 和 Dart</p>
+<h2 id="看看运行效果"><a href="#看看运行效果" class="headerlink" title="看看运行效果"></a>看看运行效果</h2><p>运行<a href="https://angular.io/resources/live-examples/quickstart/js/plnkr.html/" target="_blank" rel="noopener">在线示例</a>能快速看到看到 Angular 2 应用的实例，运行结果如下图：</p>
 <a id="more"></a>
 
 <p>文件目录结构如下</p>
 <p><img src="http://www.ziwuo.com/wp-content/uploads/2016/04/QQ%E6%88%AA%E5%9B%BE20160505105117.jpg" alt=""></p>
-<p>从功能上看只有一个index.html和两个app文件夹中的JavaScript文件。</p>
-<p>当然，我们不会只在plunker上建立应用，接下来展示一个实际操作流程</p>
+<p>从功能上看只有一个 index.html 和两个 app 文件夹中的 JavaScript 文件。</p>
+<p>当然，我们不会只在 plunker 上建立应用，接下来展示一个实际操作流程</p>
 <ul>
 <li>建立我们的开发环境</li>
-<li>为我们的应用编写Angular根组件</li>
+<li>为我们的应用编写 Angular 根组件</li>
 <li>引到它控制主页面</li>
 <li>编写主页面</li>
 </ul>
@@ -229,7 +229,7 @@
 <p>我们真的可以在五分钟内建立快速入门，如果我们按照指示并且忽略评论。</p>
 </blockquote>
 <blockquote>
-<p>我们大多数人会感兴趣的“为什么”以及“如何”，这将需要更长的时间。 </p>
+<p>我们大多数人会感兴趣的“为什么”以及“如何”，这将需要更长的时间。</p>
 </blockquote>
 <h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><p>我们需要一个应用程序项目文件夹，一些库和编辑器。</p>
 <h3 id="创建一个新项目文件夹"><a href="#创建一个新项目文件夹" class="headerlink" title="创建一个新项目文件夹"></a>创建一个新项目文件夹</h3><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
@@ -249,11 +249,11 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0009 seconds] -->
 
-<h3 id="加入我们需要的库文件"><a href="#加入我们需要的库文件" class="headerlink" title="加入我们需要的库文件"></a>加入我们需要的库文件</h3><p>我们建议使用npm包管理器来采集和管理我们的开发库。</p>
+<h3 id="加入我们需要的库文件"><a href="#加入我们需要的库文件" class="headerlink" title="加入我们需要的库文件"></a>加入我们需要的库文件</h3><p>我们建议使用 npm 包管理器来采集和管理我们的开发库。</p>
 <blockquote>
-<p>在这个文档中会大量繁复使用npm包管理器。</p>
+<p>在这个文档中会大量繁复使用 npm 包管理器。</p>
 </blockquote>
-<p>添加一个package.json文件到项目文件夹，复制粘贴以下内容：</p>
+<p>添加一个 package.json 文件到项目文件夹，复制粘贴以下内容：</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298ed4240652242&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -272,9 +272,9 @@
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0057 seconds] -->
 
 <blockquote>
-<p>package.json的设置细节在下面的附录中会有解释</p>
+<p>package.json 的设置细节在下面的附录中会有解释</p>
 </blockquote>
-<p>打开一个terminal窗口（Windows系统在cmd中打开）运行下面的npm命令</em></p>
+<p>打开一个 terminal 窗口（Windows 系统在 cmd 中打开）运行下面的 npm 命令</em></p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298edc085478325&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -293,11 +293,11 @@
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0004 seconds] -->
 
 <blockquote>
-<p><a href="http://www.ziwuo.com/archives/24.html" target="_blank" rel="noopener">AngularJS,自定义filter实现文字和拼音的双过滤</a> 在安装过程中可能会出现红色错误消息。 别理他们。安装会成功。请参阅下面的附录以获取更多信息。</p>
+<p><a href="http://www.ziwuo.com/archives/24.html" target="_blank" rel="noopener">AngularJS,自定义 filter 实现文字和拼音的双过滤</a> 在安装过程中可能会出现红色错误消息。 别理他们。安装会成功。请参阅下面的附录以获取更多信息。</p>
 </blockquote>
-<h2 id="我们的第一个Angular组件"><a href="#我们的第一个Angular组件" class="headerlink" title="我们的第一个Angular组件"></a>我们的第一个Angular组件</h2><p>组件是最基本的Angular概念。组件管理着视图。</p>
-<p>从技术上讲，一个组件是控制视图模板的类。在因为Angular应用中我们会建立很多组件。这是我们的第一次尝试，所以我们做一个简单的。</p>
-<h3 id="创建一个应用程序源的子文件夹"><a href="#创建一个应用程序源的子文件夹" class="headerlink" title="创建一个应用程序源的子文件夹"></a>创建一个应用程序源的子文件夹</h3><p>规范上把应用代码都放在app的子文件夹里面</p>
+<h2 id="我们的第一个-Angular-组件"><a href="#我们的第一个-Angular-组件" class="headerlink" title="我们的第一个 Angular 组件"></a>我们的第一个 Angular 组件</h2><p>组件是最基本的 Angular 概念。组件管理着视图。</p>
+<p>从技术上讲，一个组件是控制视图模板的类。在因为 Angular 应用中我们会建立很多组件。这是我们的第一次尝试，所以我们做一个简单的。</p>
+<h3 id="创建一个应用程序源的子文件夹"><a href="#创建一个应用程序源的子文件夹" class="headerlink" title="创建一个应用程序源的子文件夹"></a>创建一个应用程序源的子文件夹</h3><p>规范上把应用代码都放在 app 的子文件夹里面</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298ee3040454562&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -315,7 +315,7 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0007 seconds] -->
 
-<h3 id="添加组件文件"><a href="#添加组件文件" class="headerlink" title="添加组件文件"></a>添加组件文件</h3><p>添加一个app.component.js文件复制粘贴以下代码</p>
+<h3 id="添加组件文件"><a href="#添加组件文件" class="headerlink" title="添加组件文件"></a>添加组件文件</h3><p>添加一个 app.component.js 文件复制粘贴以下代码</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298ee9347246607&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -333,7 +333,7 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0030 seconds] -->
 
-<p>我们通过Component 和Class的方法创建一个名为AppComponent的可视化组件 ，属于全局Angular 的核心命名方法，ng.core。</p>
+<p>我们通过 Component 和 Class 的方法创建一个名为 AppComponent 的可视化组件 ，属于全局 Angular 的核心命名方法，ng.core。</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298eef224119993&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -351,12 +351,12 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0014 seconds] -->
 
-<p>Component方法具有两个属性。Class方法是我们运行组件的地方，用属性和方法来绑定视图和UI的行为。</p>
+<p>Component 方法具有两个属性。Class 方法是我们运行组件的地方，用属性和方法来绑定视图和 UI 的行为。</p>
 <p>回顾以下详细代码</p>
-<h3 id="Modules模块"><a href="#Modules模块" class="headerlink" title="Modules模块"></a>Modules模块</h3><p>Angular应用程序是模块化的。它们包括许多文件每个文件都有它专门的用处。</p>
-<p>ES5 JavaScript本身没有本地模块系统。我们可以使用一些流行的第三方模块系统。作为代替，为了简便起见和避免优先级问题，我们会为应用程序创建一个单一的全局命名空间。</p>
-<p>我们称呼它为app ，我们将所有的代码构件到这一个全局对象。</p>
-<p>不要去污染全局命名空间。所以每个文件的代码围绕IIFE（“立即执行函数表达式”）。</p>
+<h3 id="Modules-模块"><a href="#Modules-模块" class="headerlink" title="Modules 模块"></a>Modules 模块</h3><p>Angular 应用程序是模块化的。它们包括许多文件每个文件都有它专门的用处。</p>
+<p>ES5 JavaScript 本身没有本地模块系统。我们可以使用一些流行的第三方模块系统。作为代替，为了简便起见和避免优先级问题，我们会为应用程序创建一个单一的全局命名空间。</p>
+<p>我们称呼它为 app ，我们将所有的代码构件到这一个全局对象。</p>
+<p>不要去污染全局命名空间。所以每个文件的代码围绕 IIFE（“立即执行函数表达式”）。</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298ef6074070245&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -374,8 +374,8 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0014 seconds] -->
 
-<p>我们绕过全局应用命名空间对象到IIFE，用一个空对象初始化。</p>
-<p>大多数应用程序文件通过添加东西到命名空间输出这个东西。例如我们的app.component.js文件输出AppComponent。</p>
+<p>我们绕过全局应用命名空间对象到 IIFE，用一个空对象初始化。</p>
+<p>大多数应用程序文件通过添加东西到命名空间输出这个东西。例如我们的 app.component.js 文件输出 AppComponent。</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298efc187818661&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -393,9 +393,9 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0006 seconds] -->
 
-<p>更复杂的应用会有AppComponent的子组件。一个更复杂的应用程序将有更多的文件和模块。</p>
+<p>更复杂的应用会有 AppComponent 的子组件。一个更复杂的应用程序将有更多的文件和模块。</p>
 <p>这个快速入门应用是很简单的;只有一个我们需要的组件。但是模块依然在这样一个小小的应用程序发挥了一个基本的组织作用。</p>
-<p>模块依赖于其他模块。在JavaScript <a href="http://loyal-friend.de/2015/05/11-september-2008/" target="_blank" rel="noopener">11.</a> Angular应用中，当我们需要另一个模块提供的东西，我们从app对象获取它。当另一个模块涉及到AppComponent，它从app.AppComponent中获取它。</p>
+<p>模块依赖于其他模块。在 JavaScript <a href="http://loyal-friend.de/2015/05/11-september-2008/" target="_blank" rel="noopener">11.</a> Angular 应用中，当我们需要另一个模块提供的东西，我们从 app 对象获取它。当另一个模块涉及到 AppComponent，它从 app.AppComponent 中获取它。</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298f02250924520&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -413,9 +413,9 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0011 seconds] -->
 
-<p>Angular本身也是模块化的。它是一个库模块的集合。每个库本身由一些相关的功能模块组成。</p>
-<p>当我们需要Angular的某些东西，我们用ng对象来获取。</p>
-<h3 id="The-Class-definition-object-类定义对象"><a href="#The-Class-definition-object-类定义对象" class="headerlink" title="The Class definition object?类定义对象"></a>The Class definition object?类定义对象</h3><p>在文件的底部是一个空的、不做任何事情的类定义对象。当我们准备好建立一个独立应用，我们以用属性和应用逻辑来扩展此对象。在快速入门中我们AppComponent类只有一个空的构造，是因为我们不需要它在这个快速入门中做任何事情。</p>
+<p>Angular 本身也是模块化的。它是一个库模块的集合。每个库本身由一些相关的功能模块组成。</p>
+<p>当我们需要 Angular 的某些东西，我们用 ng 对象来获取。</p>
+<h3 id="The-Class-definition-object-类定义对象"><a href="#The-Class-definition-object-类定义对象" class="headerlink" title="The Class definition object?类定义对象"></a>The Class definition object?类定义对象</h3><p>在文件的底部是一个空的、不做任何事情的类定义对象。当我们准备好建立一个独立应用，我们以用属性和应用逻辑来扩展此对象。在快速入门中我们 AppComponent 类只有一个空的构造，是因为我们不需要它在这个快速入门中做任何事情。</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298f08262980904&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -433,7 +433,7 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0011 seconds] -->
 
-<h3 id="The-Component-definition-object-组件定义对象"><a href="#The-Component-definition-object-组件定义对象" class="headerlink" title="The Component definition object?组件定义对象"></a>The Component definition object?组件定义对象</h3><p>ng.core.Component()告诉Angular这个类定义对象是一个Angular组件。配置对象传递给ng.core.Component()方法两个字段，一个selector 和一个 template。</p>
+<h3 id="The-Component-definition-object-组件定义对象"><a href="#The-Component-definition-object-组件定义对象" class="headerlink" title="The Component definition object?组件定义对象"></a>The Component definition object?组件定义对象</h3><p>ng.core.Component()告诉 Angular 这个类定义对象是一个 Angular 组件。配置对象传递给 ng.core.Component()方法两个字段，一个 selector 和一个 template。</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298f0e293927067&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -451,17 +451,17 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0013 seconds] -->
 
-<p>selector为名为my-app的HTML元素指定一个简单的CSS选择器。Angular无论在HTML中哪里遇到my-app元素就会创建和显示AppComponent实例 。</p>
+<p>selector 为名为 my-app 的 HTML 元素指定一个简单的 CSS 选择器。Angular 无论在 HTML 中哪里遇到 my-app 元素就会创建和显示 AppComponent 实例 。</p>
 <blockquote>
-<p><a href="http://www.managing-it.nl/management-artikelen/teamwork/een-tevreden-team-is-een-sterk-team/" target="_blank" rel="noopener">Een</a> 记住my-app选择器，我们会在编写index.html中用到</p>
+<p><a href="http://www.managing-it.nl/management-artikelen/teamwork/een-tevreden-team-is-een-sterk-team/" target="_blank" rel="noopener">Een</a> 记住 my-app 选择器，我们会在编写 index.html 中用到</p>
 </blockquote>
 <blockquote>
-<p><a href="http://www.cheapelitejerseys.us.com" target="_blank" rel="noopener">cheap nba jerseys</a> 模板属性保存组件的同步模板。模板是HTML的一种形式，它告诉Angular 如何呈现一个视图。我们的模板是一个单行的HTML显示“My First Angular App”。</p>
+<p><a href="http://www.cheapelitejerseys.us.com" target="_blank" rel="noopener">cheap nba jerseys</a> 模板属性保存组件的同步模板。模板是 HTML 的一种形式，它告诉 Angular 如何呈现一个视图。我们的模板是一个单行的 HTML 显示“My First Angular App”。</p>
 </blockquote>
 <blockquote>
-<p>现在我们需要一些东西来告诉Angular 来加载这个组件。</p>
+<p>现在我们需要一些东西来告诉 Angular 来加载这个组件。</p>
 </blockquote>
-<h3 id="Bootstrap-it-引导"><a href="#Bootstrap-it-引导" class="headerlink" title="Bootstrap it! 引导"></a>Bootstrap it! 引导</h3><p>添加一个新文件main.js到app文件夹</p>
+<h3 id="Bootstrap-it-引导"><a href="#Bootstrap-it-引导" class="headerlink" title="Bootstrap it! 引导"></a>Bootstrap it! 引导</h3><p>添加一个新文件 main.js 到 app 文件夹</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298f14767278600&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -481,16 +481,16 @@
 
 <p>我们需要两样东西来启动应用程序：</p>
 <ul>
-<li>Angular的浏览器引导功能</li>
+<li>Angular 的浏览器引导功能</li>
 <li>我们刚写的应用根组件</li>
 </ul>
 <p>两个东西都在我们的“命名空间”里。引导它，传递到根组件类型，AppComponent。</p>
 <blockquote>
-<p>了解为什么引到和main.js的详情点击<a href="https://angular.io/docs/js/latest/quickstart.html#main" target="_blank" rel="noopener">链接</a></p>
+<p>了解为什么引到和 main.js 的详情点击<a href="https://angular.io/docs/js/latest/quickstart.html#main" target="_blank" rel="noopener">链接</a></p>
 </blockquote>
-<p>我们要求Angular在浏览器启动应用程序与我们的根组件。Angular会放在哪里呢？</p>
-<h2 id="添加index-html文件"><a href="#添加index-html文件" class="headerlink" title="添加index.html文件"></a>添加index.html文件</h2><p>Angular会在index.html的特定位置的显示我们的应用程序。现在是时候创建这个文件。</p>
-<p>我们不会把index.html放在app文件夹。我们把它放在上一级项目的根文件夹。</p>
+<p>我们要求 Angular 在浏览器启动应用程序与我们的根组件。Angular 会放在哪里呢？</p>
+<h2 id="添加-index-html-文件"><a href="#添加-index-html-文件" class="headerlink" title="添加 index.html 文件"></a>添加 index.html 文件</h2><p>Angular 会在 index.html 的特定位置的显示我们的应用程序。现在是时候创建这个文件。</p>
+<p>我们不会把 index.html 放在 app 文件夹。我们把它放在上一级项目的根文件夹。</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298f1b735905073&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -508,7 +508,7 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0005 seconds] -->
 
-<p>现在创建index.html</p>
+<p>现在创建 index.html</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298f21015591892&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -526,14 +526,14 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0139 seconds] -->
 
-<p>在HTML中有三个值得关注的部分：</p>
+<p>在 HTML 中有三个值得关注的部分：</p>
 <ul>
-<li>加载需要的JavaScript库</li>
-<li>加载我们的JavaScript文件，注意它们的顺序（app.component.js放在main.js前面）。</li>
+<li>加载需要的 JavaScript 库</li>
+<li>加载我们的 JavaScript 文件，注意它们的顺序（app.component.js 放在 main.js 前面）。</li>
 <li>我们在<body>中加入<my-app>标签。这是我们的应用程序运行的地方。</li>
 </ul>
-<p>当Angular调用main.js引导功能，它会读取AppComponent元数据，发现my-app选择器，找到名为my-app的元素，并在这个标签内加载我们的应用程序。</p>
-<h2 id="Run-运行"><a href="#Run-运行" class="headerlink" title="Run! 运行"></a>Run! 运行</h2><p>打开terminal窗口输入以下命令：</p>
+<p>当 Angular 调用 main.js 引导功能，它会读取 AppComponent 元数据，发现 my-app 选择器，找到名为 my-app 的元素，并在这个标签内加载我们的应用程序。</p>
+<h2 id="Run-运行"><a href="#Run-运行" class="headerlink" title="Run! 运行"></a>Run! 运行</h2><p>打开 terminal 窗口输入以下命令：</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298f28035914915&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -551,17 +551,17 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0004 seconds] -->
 
-<p>该命令会在浏览器中运行一个名叫 lite-server的静态服务器加载index.html，并在应用文件改变时刷新浏览器。</p>
+<p>该命令会在浏览器中运行一个名叫 lite-server 的静态服务器加载 index.html，并在应用文件改变时刷新浏览器。</p>
 <p>片刻后，一个浏览器标签页会打开并显示</p>
 <p>恭喜！我们做好了</p>
 <blockquote>
-<p>如果你一直看到loading&#8230;界面，查看ES2015的浏览器支持</p>
+<p>如果你一直看到 loading&#8230;界面，查看 ES2015 的浏览器支持</p>
 </blockquote>
 <h3 id="做一些改动"><a href="#做一些改动" class="headerlink" title="做一些改动"></a>做一些改动</h3><p>尝试更改消息为“My SECOND <a href="http://www.ziwuo.com/archives/6.html" target="_blank" rel="noopener">前端编码规范</a> Angular 2 app”</p>
-<p>lite-server会一直监听，当检测到变化，会刷新浏览器，并显示修改后的消息。</p>
+<p>lite-server 会一直监听，当检测到变化，会刷新浏览器，并显示修改后的消息。</p>
 <p>这是开发一个应用程序的一个很巧妙的方法！</p>
 <p>关闭终端窗口，当我们完成终止服务器。</p>
-<p>##最终的文件结构</em></h2> </p>
+<p>##最终的文件结构</em></h2></p>
 <p>我们最终的项目文件夹结构看起来是这样的：</p>
 <p><img src="http://www.ziwuo.com/wp-content/uploads/2016/04/QQ%E6%88%AA%E5%9B%BE20160504153700.jpg" alt=""></p>
 <p>所有的文件：</p>
@@ -633,11 +633,11 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0056 seconds] -->
 
-<h2 id="Wrap-Up-打包"><a href="#Wrap-Up-打包" class="headerlink" title="Wrap Up ?打包"></a>Wrap Up ?打包</h2><p>我们的第一个应用程序不会去做太多。它基本上是Angular2版本的“Hello, World”?。</p>
-<p>我们保持了它的简洁：编写一个小Angular组件，给index.html增加了一些JavaScript库，用一个静态文件服务器启动。这就是预期的“Hello, <a href="http://philadelphiaeaglesjerseyspop.forumcity.com/viewtopic.php?p=20#20" target="_blank" rel="noopener">Online</a> World”应用程序需要做的。</p>
-<p>但是我们需要Angular2做的更多。</p>
-<p>好消息是，大部分设置我们可以丢到脑后。我们可能只会触及package.json的更新。除了为我们的应用“模块”增加脚本文件，我们很可能只有当我们需要添加一个库或CSS样式表才会打开index.html。</p>
-<p>下一步，构建一个小的应用程序演示，用Angular2建立更好的东西。</p>
+<h2 id="Wrap-Up-打包"><a href="#Wrap-Up-打包" class="headerlink" title="Wrap Up ?打包"></a>Wrap Up ?打包</h2><p>我们的第一个应用程序不会去做太多。它基本上是 Angular2 版本的“Hello, World”?。</p>
+<p>我们保持了它的简洁：编写一个小 Angular 组件，给 index.html 增加了一些 JavaScript 库，用一个静态文件服务器启动。这就是预期的“Hello, <a href="http://philadelphiaeaglesjerseyspop.forumcity.com/viewtopic.php?p=20#20" target="_blank" rel="noopener">Online</a> World”应用程序需要做的。</p>
+<p>但是我们需要 Angular2 做的更多。</p>
+<p>好消息是，大部分设置我们可以丢到脑后。我们可能只会触及 package.json 的更新。除了为我们的应用“模块”增加脚本文件，我们很可能只有当我们需要添加一个库或 CSS 样式表才会打开 index.html。</p>
+<p>下一步，构建一个小的应用程序演示，用 Angular2 建立更好的东西。</p>
 <p><a href="https://angular.io/docs/js/latest/tutorial" target="_blank" rel="noopener">加入我们的英雄教程之旅！</a></p>
 <h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>这章由几部分快速阐述几个重要点</p>
 <p>这里没有详细的资料，如果你好奇可以继续查阅。</p>
@@ -662,17 +662,17 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0045 seconds] -->
 
-<p>我们开始于一个Internet Explorer填充工具。 IE需要填充工具来运行依赖于ES2015 promises和动态加载模块的应用程序。大多数应用程序需要这些功能并且能在Internet Explorer中运行。</p>
-<p>接下来是Angular2的polyfills，zone.js和Reflect.js，跟随the Reactive Extensions RxJS库.</p>
+<p>我们开始于一个 Internet Explorer 填充工具。 IE 需要填充工具来运行依赖于 ES2015 promises 和动态加载模块的应用程序。大多数应用程序需要这些功能并且能在 Internet Explorer 中运行。</p>
+<p>接下来是 Angular2 的 polyfills，zone.js 和 Reflect.js，跟随 the Reactive Extensions RxJS 库.</p>
 <blockquote>
-<p>我们的快速入门没有使用RxJS库,但是任何实质的应用都想要RxJS库，我们在快速入门项目中加入库，以后以后忘记。</p>
+<p>我们的快速入门没有使用 RxJS 库,但是任何实质的应用都想要 RxJS 库，我们在快速入门项目中加入库，以后以后忘记。</p>
 </blockquote>
-<p>最后，我们载入了Angular2本身的web开发版本</p>
+<p>最后，我们载入了 Angular2 本身的 web 开发版本</p>
 <p>以后为了提升产品质量（载入时间，内存占用）我们会做出不同的选择</p>
-<h3 id="附录：-package-json"><a href="#附录：-package-json" class="headerlink" title="附录： package.json"></a>附录： package.json</h3><p>npm是一个流行的包管理器，Angular应用开发者依靠它获得和管理应用依赖的库。</p>
-<p>我们在npm中指定我们需要的库文件package.json.</p>
+<h3 id="附录：-package-json"><a href="#附录：-package-json" class="headerlink" title="附录： package.json"></a>附录： package.json</h3><p>npm 是一个流行的包管理器，Angular 应用开发者依靠它获得和管理应用依赖的库。</p>
+<p>我们在 npm 中指定我们需要的库文件 package.json.</p>
 <p>The Angular team suggests the packages listed <a href="http://www.newenglandpatriotsjerseyspop.com" target="_blank" rel="noopener">wholesale nfl jerseys</a> in the <code>dependencies</code> and <code>devDependencies</code> sections listed <a href="http://www.dallascowboysjerseyspop.com" target="_blank" rel="noopener">wholesale mlb jerseys</a> in this file:</p>
-<p>Angular官方建议把包的清单列入文件的dependencies和devDependencies部分：</p>
+<p>Angular 官方建议把包的清单列入文件的 dependencies 和 devDependencies 部分：</p>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
 <pre><code>&lt;div id=&quot;crayon-589875b298f50834917547&quot; class=&quot;crayon-syntax crayon-theme-sublime-text crayon-font-sourcecodepro crayon-os-pc print-yes notranslate&quot; style=&quot;margin-top: 12px;margin-bottom: 12px;font-size: 14px !important;line-height: 24px !important&quot;&gt;
@@ -694,7 +694,7 @@
 <p>还有一些其他的包可供选择。我们推荐这个很好使用的专门设置。现在和我们一起使用吧。以后可以随意替换来适应你的习惯和经验。</p>
 </blockquote>
 <blockquote>
-<p>一个package.json文件有一个可供选择的script部分，方便我们定义有用的命令来进行开发和建设任务。我们已经包含了一些这样的脚本在我们的package.json：</p>
+<p>一个 package.json 文件有一个可供选择的 script 部分，方便我们定义有用的命令来进行开发和建设任务。我们已经包含了一些这样的脚本在我们的 package.json：</p>
 </blockquote>
 <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
 
@@ -731,19 +731,19 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre><!-- [Format Time: 0.0004 seconds] -->
 
-<p>我们使用专用的npm start命令，但是它所做的只是运行<code>npm run lite</code>。</p>
-<p>我们用这样的方式执行npm脚本：<code>npm run</code> + 脚本名。下面是这些脚本所做的：</p>
+<p>我们使用专用的 npm start 命令，但是它所做的只是运行<code>npm run lite</code>。</p>
+<p>我们用这样的方式执行 npm 脚本：<code>npm run</code> + 脚本名。下面是这些脚本所做的：</p>
 <ul>
-<li>npm run lite &#8211; 运行 lite-server,一个轻量的静态文件服务器，由John Papa编写和维护，对Angular应用使用路由有很好的支持。</li>
+<li>npm run lite &#8211; 运行 lite-server,一个轻量的静态文件服务器，由 John Papa 编写和维护，对 Angular 应用使用路由有很好的支持。</li>
 </ul>
-<h3 id="附录-Npm-的错误和警告"><a href="#附录-Npm-的错误和警告" class="headerlink" title="附录: Npm 的错误和警告"></a>附录: Npm 的错误和警告</h3><p>如果没有以<code>npm  &lt;a href=&quot;http://www.ziwuo.com/archives/36.html&quot;&gt;AngularJS，实现contenteditable的双向绑定&lt;/a&gt;  ERR!</code>开头的消息出现在npm安装的尾部表示一切都没问题。也许会有一些<code>npm WARN</code>的消息，这是完全没问题的。</p>
+<h3 id="附录-Npm-的错误和警告"><a href="#附录-Npm-的错误和警告" class="headerlink" title="附录: Npm 的错误和警告"></a>附录: Npm 的错误和警告</h3><p>如果没有以<code>npm &lt;a href=&quot;http://www.ziwuo.com/archives/36.html&quot;&gt;AngularJS，实现contenteditable的双向绑定&lt;/a&gt; ERR!</code>开头的消息出现在 npm 安装的尾部表示一切都没问题。也许会有一些<code>npm WARN</code>的消息，这是完全没问题的。</p>
 <p>我们有时候会看到<code>npm WARN</code>的消息在一系列的<code>gyp ERR!</code>的消息后面。忽略它。一个包可能会使用<code>node-gyp</code>重新编译它自己。如果重新编译失败，包就会还原（通常是预发布版本）一切都能正常使用。</p>
 <p>只要确定没有<code>npm ERR!</code>消息在<code>npm install</code>的最后面。</p>
 <h3 id="附录-main-js"><a href="#附录-main-js" class="headerlink" title="附录: main.js"></a>附录: main.js</h3><h4 id="引导特定的平台"><a href="#引导特定的平台" class="headerlink" title="引导特定的平台"></a>引导特定的平台</h4><p>我们从<code>ng.platformBrowserDynamic</code>中使用<code>bootstrap</code>功能，而不是<code>ng.core</code>，这里有一个非常好的理由。</p>
-<p>只有在所有平台的目标功能我们才称之为&#8221;core&#8221;。大部分Angular应用只运行在浏览器上，我们大部分时间只从这个库调用引到函数。如果我们总是为浏览器来编写这就是一个标准的&#8221;core&#8221;</p>
+<p>只有在所有平台的目标功能我们才称之为&#8221;core&#8221;。大部分 Angular 应用只运行在浏览器上，我们大部分时间只从这个库调用引到函数。如果我们总是为浏览器来编写这就是一个标准的&#8221;core&#8221;</p>
 <p>但是它有可能在不同环境载入一个组件。我们可能在一个移动设备的<code>Apache Cordova</code>或者<code>NativeScript</code>上载入它。我们也许希望渲染应用的第一页来提高启动性能或便于搜索引擎优化。</p>
 <p>这些目标需要我们从不同的库中引入不同的引导函数</p>
-<h4 id="为什么要建立一个单独的main-js文件？"><a href="#为什么要建立一个单独的main-js文件？" class="headerlink" title="为什么要建立一个单独的main.js文件？"></a>为什么要建立一个单独的main.js文件？</h4><p>main.js文件很小。这只是个快速入门项目。你可以把它合并到<code>app.component.js</code>文件来避免复杂度。</p>
+<h4 id="为什么要建立一个单独的-main-js-文件？"><a href="#为什么要建立一个单独的-main-js-文件？" class="headerlink" title="为什么要建立一个单独的 main.js 文件？"></a>为什么要建立一个单独的 main.js 文件？</h4><p>main.js 文件很小。这只是个快速入门项目。你可以把它合并到<code>app.component.js</code>文件来避免复杂度。</p>
 <p>我们不这么做的原因是：</p>
 <ol>
 <li><p>正确的做法很容易</p>
@@ -766,7 +766,7 @@
 <h4 id="重复使用性"><a href="#重复使用性" class="headerlink" title="重复使用性"></a>重复使用性</h4><p>随着应用的发展我们重构、重命名、重定位文件。当文件调用<code>bootStrap</code>我们不能做任何事情，我们不能移动它，不能再另一个应用中重复使用，不能为了性能在服务器上预渲染组件</p>
 <h4 id="关系的分离"><a href="#关系的分离" class="headerlink" title="关系的分离"></a>关系的分离</h4><p>组件的职责是呈现和管理视图。</p>
 <p>应用启动和视图管理没有任何关系。这是关系的分离。我们在测试和重用中遇到的摩擦源于这种不必要的职责混合。</p>
-<h4 id="导入和导出"><a href="#导入和导出" class="headerlink" title="导入和导出"></a>导入和导出</h4><p>当编写一个单独的main.js文件我们学习到了一个必要的Angular技巧：如何从一个模块中导出和导入到另一个途径的命名空间的概念。在以后的Angular学习中我们会做很多这样的事。</p>
+<h4 id="导入和导出"><a href="#导入和导出" class="headerlink" title="导入和导出"></a>导入和导出</h4><p>当编写一个单独的 main.js 文件我们学习到了一个必要的 Angular 技巧：如何从一个模块中导出和导入到另一个途径的命名空间的概念。在以后的 Angular 学习中我们会做很多这样的事。</p>
 
     </div>
 
@@ -850,7 +850,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#看看运行效果"><span class="nav-number">1.</span> <span class="nav-text">看看运行效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发环境"><span class="nav-number">2.</span> <span class="nav-text">开发环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个新项目文件夹"><span class="nav-number">2.1.</span> <span class="nav-text">创建一个新项目文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加入我们需要的库文件"><span class="nav-number">2.2.</span> <span class="nav-text">加入我们需要的库文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我们的第一个Angular组件"><span class="nav-number">3.</span> <span class="nav-text">我们的第一个Angular组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个应用程序源的子文件夹"><span class="nav-number">3.1.</span> <span class="nav-text">创建一个应用程序源的子文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加组件文件"><span class="nav-number">3.2.</span> <span class="nav-text">添加组件文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Modules模块"><span class="nav-number">3.3.</span> <span class="nav-text">Modules模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Class-definition-object-类定义对象"><span class="nav-number">3.4.</span> <span class="nav-text">The Class definition object?类定义对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Component-definition-object-组件定义对象"><span class="nav-number">3.5.</span> <span class="nav-text">The Component definition object?组件定义对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap-it-引导"><span class="nav-number">3.6.</span> <span class="nav-text">Bootstrap it! 引导</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加index-html文件"><span class="nav-number">4.</span> <span class="nav-text">添加index.html文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run-运行"><span class="nav-number">5.</span> <span class="nav-text">Run! 运行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#做一些改动"><span class="nav-number">5.1.</span> <span class="nav-text">做一些改动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wrap-Up-打包"><span class="nav-number">6.</span> <span class="nav-text">Wrap Up ?打包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录"><span class="nav-number">7.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#附录：库"><span class="nav-number">7.1.</span> <span class="nav-text">附录：库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录：-package-json"><span class="nav-number">7.2.</span> <span class="nav-text">附录： package.json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录-Npm-的错误和警告"><span class="nav-number">7.3.</span> <span class="nav-text">附录: Npm 的错误和警告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录-main-js"><span class="nav-number">7.4.</span> <span class="nav-text">附录: main.js</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#引导特定的平台"><span class="nav-number">7.4.1.</span> <span class="nav-text">引导特定的平台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要建立一个单独的main-js文件？"><span class="nav-number">7.4.2.</span> <span class="nav-text">为什么要建立一个单独的main.js文件？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这很简单"><span class="nav-number">7.4.3.</span> <span class="nav-text">这很简单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重复使用性"><span class="nav-number">7.4.4.</span> <span class="nav-text">重复使用性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关系的分离"><span class="nav-number">7.4.5.</span> <span class="nav-text">关系的分离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导入和导出"><span class="nav-number">7.4.6.</span> <span class="nav-text">导入和导出</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#看看运行效果"><span class="nav-number">1.</span> <span class="nav-text">看看运行效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发环境"><span class="nav-number">2.</span> <span class="nav-text">开发环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个新项目文件夹"><span class="nav-number">2.1.</span> <span class="nav-text">创建一个新项目文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加入我们需要的库文件"><span class="nav-number">2.2.</span> <span class="nav-text">加入我们需要的库文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我们的第一个-Angular-组件"><span class="nav-number">3.</span> <span class="nav-text">我们的第一个 Angular 组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个应用程序源的子文件夹"><span class="nav-number">3.1.</span> <span class="nav-text">创建一个应用程序源的子文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加组件文件"><span class="nav-number">3.2.</span> <span class="nav-text">添加组件文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Modules-模块"><span class="nav-number">3.3.</span> <span class="nav-text">Modules 模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Class-definition-object-类定义对象"><span class="nav-number">3.4.</span> <span class="nav-text">The Class definition object?类定义对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Component-definition-object-组件定义对象"><span class="nav-number">3.5.</span> <span class="nav-text">The Component definition object?组件定义对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap-it-引导"><span class="nav-number">3.6.</span> <span class="nav-text">Bootstrap it! 引导</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-index-html-文件"><span class="nav-number">4.</span> <span class="nav-text">添加 index.html 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run-运行"><span class="nav-number">5.</span> <span class="nav-text">Run! 运行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#做一些改动"><span class="nav-number">5.1.</span> <span class="nav-text">做一些改动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wrap-Up-打包"><span class="nav-number">6.</span> <span class="nav-text">Wrap Up ?打包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录"><span class="nav-number">7.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#附录：库"><span class="nav-number">7.1.</span> <span class="nav-text">附录：库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录：-package-json"><span class="nav-number">7.2.</span> <span class="nav-text">附录： package.json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录-Npm-的错误和警告"><span class="nav-number">7.3.</span> <span class="nav-text">附录: Npm 的错误和警告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录-main-js"><span class="nav-number">7.4.</span> <span class="nav-text">附录: main.js</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#引导特定的平台"><span class="nav-number">7.4.1.</span> <span class="nav-text">引导特定的平台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要建立一个单独的-main-js-文件？"><span class="nav-number">7.4.2.</span> <span class="nav-text">为什么要建立一个单独的 main.js 文件？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这很简单"><span class="nav-number">7.4.3.</span> <span class="nav-text">这很简单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重复使用性"><span class="nav-number">7.4.4.</span> <span class="nav-text">重复使用性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关系的分离"><span class="nav-number">7.4.5.</span> <span class="nav-text">关系的分离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导入和导出"><span class="nav-number">7.4.6.</span> <span class="nav-text">导入和导出</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
