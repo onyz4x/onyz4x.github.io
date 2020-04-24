@@ -1,17 +1,16 @@
 ---
-layout: post
-title:  "前端编码规范"
-date:   2018-09-10 11:26:03 +0800
-categories: jekyll update
-toc: true
+title: "前端编码规范"
+date: 2018-09-10 11:26:03 +0800
 ---
 
 ## 前言
-首先，写这篇代码规范是为了我自己在以后的项目中方便引用，让前端人员统一标准，方便在开发中保持代码的一致性，HTML和CSS的规范参照 [bootstrap编码规范](https://codeguide.bootcss.com/) ，以下多为JS规则
 
-eslint 统一代码规范，通常推荐项目框架默认的eslint设置
+首先，写这篇代码规范是为了我自己在以后的项目中方便引用，让前端人员统一标准，方便在开发中保持代码的一致性，HTML 和 CSS 的规范参照 [bootstrap 编码规范](https://codeguide.bootcss.com/) ，以下多为 JS 规则
+
+eslint 统一代码规范，通常推荐项目框架默认的 eslint 设置
 
 ## 黄金定律
+
 永远遵循同一套编码规范 -- 可以是这里列出的，也可以是你自己总结的。如果你发现本规范中有任何错误，敬请指正。通过 open an issue on GitHub 为本规范添加内容或贡献力量。
 
 ```
@@ -19,11 +18,13 @@ eslint 统一代码规范，通常推荐项目框架默认的eslint设置
 ```
 
 ## 语法
-HTML,CSS和Javascript都用两个空格来代替制表符（tab）；
-webstorm设置HTML和CSS格式化的方法：File-Settings,Editor-CodeStyle-HTML(或者CSS),在Tabs and Indents选项卡下把TabSize和Indent的值均改为2；
-webstorm格式化快捷键Ctrl+Alt+L;
+
+HTML,CSS 和 Javascript 都用两个空格来代替制表符（tab）；
+webstorm 设置 HTML 和 CSS 格式化的方法：File-Settings,Editor-CodeStyle-HTML(或者 CSS),在 Tabs and Indents 选项卡下把 TabSize 和 Indent 的值均改为 2；
+webstorm 格式化快捷键 Ctrl+Alt+L;
 命名规则
 文件命名规则：小写单英文单词，多单词使用“-”连接:
+
 ```text
 index.html
 task-bg.jpg
@@ -32,31 +33,37 @@ project-task.css
 project-ctrl.js
 projectCtrl.js
 ```
-Css类名命名规则：英文单词，多单词使用“-”连接
+
+Css 类名命名规则：英文单词，多单词使用“-”连接
+
 ```html
 <div class="task-list-title">
-   <h3 class="task-list-title-h3">
-       这里是标题
-   </h3>
+  <h3 class="task-list-title-h3">
+    这里是标题
+  </h3>
 </div>
 
 <style>
-   .task-list-title{
-       float:left;
-   }
+  .task-list-title {
+    float: left;
+  }
 </style>
 ```
-Javasctipt命名规则：英文单词，多单词使用小驼峰
+
+Javasctipt 命名规则：英文单词，多单词使用小驼峰
+
 ```javascript
 $scope.taskOpen = function () {
-    $scope.taskOpenState = true;
+  $scope.taskOpenState = true;
 };
 ```
+
 代码格式化
-把webstorm的格式化换行去掉，设置方法：找到File-Settings,Editor-General-Appearance，去掉Show right margin(configured in Code Style options)的勾选
+把 webstorm 的格式化换行去掉，设置方法：找到 File-Settings,Editor-General-Appearance，去掉 Show right margin(configured in Code Style options)的勾选
 
 其他书写规范
-当<a>标签中href属性不使用时，不用#作为填充，使用空白来填充,例如：
+当<a>标签中 href 属性不使用时，不用#作为填充，使用空白来填充,例如：
+
 ```html
 <a href="javascript:" ng-click="openPopbox()"></a>
 ```
@@ -71,8 +78,9 @@ $scope.taskOpen = function () {
  * Component section heading
  */
 
-.element { ... }
-
+.element {
+  ...;
+}
 
 /*
  * Component section heading
@@ -80,9 +88,12 @@ $scope.taskOpen = function () {
  * Sometimes you need to include optional context for the entire component. Do that up here if it's important enough.
  */
 
-.element { ... }
+.element {
+  ...;
+}
 
 /* Contextual sub-component or modifer */
-.element-heading { ... }
+.element-heading {
+  ...;
+}
 ```
-
