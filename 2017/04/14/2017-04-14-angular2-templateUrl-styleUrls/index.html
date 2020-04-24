@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"onyz4x.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="在跟随angular官方教程练习的过程中发现一个问题，关于@Component[装饰器](https:&#x2F;&#x2F;www.angular.cn&#x2F;docs&#x2F;ts&#x2F;latest&#x2F;glossary.html#decorator “”decorator” explained”)函数中templateUrl和styleUrls路径的问题，具体表现为 &amp;nbsp; 在教程中templateUrl和styleUrls中">
+  <meta name="description" content="在跟随 angular 官方教程练习的过程中发现一个问题，关于@Component[装饰器](https:&#x2F;&#x2F;www.angular.cn&#x2F;docs&#x2F;ts&#x2F;latest&#x2F;glossary.html#decorator “”decorator” explained”)函数中 templateUrl 和 styleUrls 路径的问题，具体表现为">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angular2 官方教程中 关于templateUrl和styleUrls 引用文件路径的问题">
 <meta property="og:url" content="https://onyz4x.github.io/2017/04/14/2017-04-14-angular2-templateUrl-styleUrls/index.html">
 <meta property="og:site_name" content="渐忘症患者的Blog">
-<meta property="og:description" content="在跟随angular官方教程练习的过程中发现一个问题，关于@Component[装饰器](https:&#x2F;&#x2F;www.angular.cn&#x2F;docs&#x2F;ts&#x2F;latest&#x2F;glossary.html#decorator “”decorator” explained”)函数中templateUrl和styleUrls路径的问题，具体表现为 &amp;nbsp; 在教程中templateUrl和styleUrls中">
+<meta property="og:description" content="在跟随 angular 官方教程练习的过程中发现一个问题，关于@Component[装饰器](https:&#x2F;&#x2F;www.angular.cn&#x2F;docs&#x2F;ts&#x2F;latest&#x2F;glossary.html#decorator “”decorator” explained”)函数中 templateUrl 和 styleUrls 路径的问题，具体表现为">
 <meta property="og:image" content="https://sfault-image.b0.upaiyun.com/705/487/705487986-58eddef99c310_articlex">
 <meta property="article:published_time" content="2017-04-14T01:56:26.000Z">
-<meta property="article:modified_time" content="2020-01-15T08:02:07.153Z">
+<meta property="article:modified_time" content="2020-04-24T05:09:43.989Z">
 <meta property="article:author" content="渐忘症患者">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://sfault-image.b0.upaiyun.com/705/487/705487986-58eddef99c310_articlex">
@@ -186,7 +186,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-15 16:02:07" itemprop="dateModified" datetime="2020-01-15T16:02:07+08:00">2020-01-15</time>
+                <time title="修改时间：2020-04-24 13:09:43" itemprop="dateModified" datetime="2020-04-24T13:09:43+08:00">2020-04-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -209,13 +209,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>在跟随angular官方教程练习的过程中发现一个问题，关于<code>@Component</code>[装饰器](<a href="https://www.angular.cn/docs/ts/latest/glossary.html#decorator" target="_blank" rel="noopener">https://www.angular.cn/docs/ts/latest/glossary.html#decorator</a> “”decorator” explained”)<span class="ng-scope">函数中templateUrl和styleUrls路径的问题，具体表现为</span></p>
+        <p>在跟随 angular 官方教程练习的过程中发现一个问题，关于<code>@Component</code>[装饰器](<a href="https://www.angular.cn/docs/ts/latest/glossary.html#decorator" target="_blank" rel="noopener">https://www.angular.cn/docs/ts/latest/glossary.html#decorator</a> “”decorator” explained”)<span class="ng-scope">函数中 templateUrl 和 styleUrls 路径的问题，具体表现为</span></p>
+<a id="more"></a>
+
 <p>&nbsp;</p>
-<p>在教程中templateUrl和styleUrls中引用的模板路径都是类似</p>
+<p>在教程中 templateUrl 和 styleUrls 中引用的模板路径都是类似</p>
 <pre class="hljs http"><code>    &lt;span class="hljs-attribute">templateUrl&lt;/span>: &lt;span class="hljs-string">'./heroes.component.html',&lt;/span>
     &lt;span class="hljs-attribute">styleUrls&lt;/span>: &lt;span class="hljs-string">['./heroes.component.css']&lt;/span></code></pre>
 
-<p>但是实际上如果定义了moduleId，就会出现404的问题，找不到文件</p>
+<p>但是实际上如果定义了 moduleId，就会出现 404 的问题，找不到文件</p>
 <pre class="hljs ruby"><code>&lt;span class="hljs-variable">@component&lt;/span>({
     &lt;span class="hljs-symbol">moduleId:&lt;/span> &lt;span class="hljs-class">&lt;span class="hljs-keyword">module&lt;/span>.&lt;span class="hljs-title">id&lt;/span>&lt;/span>
     ...
@@ -237,14 +239,14 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>从官方教程的代码中可以看到模块加载器是systemjs</p>
+<p>从官方教程的代码中可以看到模块加载器是 systemjs</p>
 <p>首先参考官方的文档</p>
 <p>-组件样式：<a href="https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html" target="_blank" rel="noopener">https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html</a></p>
 <p>-相对于组件的路径：<a href="https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html" target="_blank" rel="noopener">https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html</a></p>
 <p>&nbsp;</p>
-<p>从上面两个文档中，我们知道的是Angular不可能知道在运行期这些文件的正确位置，Angular能够确定的唯一的位置是首页<code>index.html</code>的URL，也就是应用的根目录。 所以，默认情况下，它只能计算相对于<code>index.html</code>的模板和样式表路径。 这就是为什么我们以前用<code>app/</code>基准路径的前缀来写文件的URL。Angular应用可能被用多种方式加载：独立文件、SystemJS包、CommonJS包等等。 用来生成模块的格式可以是任何格式。 甚至可能完全没有写成模块化代码。</p>
+<p>从上面两个文档中，我们知道的是 Angular 不可能知道在运行期这些文件的正确位置，Angular 能够确定的唯一的位置是首页<code>index.html</code>的 URL，也就是应用的根目录。 所以，默认情况下，它只能计算相对于<code>index.html</code>的模板和样式表路径。 这就是为什么我们以前用<code>app/</code>基准路径的前缀来写文件的 URL。Angular 应用可能被用多种方式加载：独立文件、SystemJS 包、CommonJS 包等等。 用来生成模块的格式可以是任何格式。 甚至可能完全没有写成模块化代码。</p>
 <p>&nbsp;</p>
-<p>但是这里并没有详细解释为什么systemjs打包运行的情况下用moduleId出现的问题</p>
+<p>但是这里并没有详细解释为什么 systemjs 打包运行的情况下用 moduleId 出现的问题</p>
 <p>而后另外一篇文章才有详细说明</p>
 <p><a href="https://blog.thoughtram.io/angular/2016/06/08/component-relative-paths-in-angular-2.html" target="_blank" rel="noopener">https://blog.thoughtram.io/angular/2016/06/08/component-relative-paths-in-angular-2.html</a></p>
 <p>里面介绍了几种不同的打包模块下的写法</p>
