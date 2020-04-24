@@ -12,6 +12,8 @@ tags:
 
 在项目中遇到需要使用标签属性`contenteditable`来替代`<textarea>`，实现输入内容的自动高度，但是`<div>`或者`<p>`标签并不是一个输入控件，不能直接被 ngModel 绑定，这个时候就需要把 contenteditable 做成一个 directive 来实现双向绑定：
 
+<!--more-->
+
 ## 代码
 
 ```javascript

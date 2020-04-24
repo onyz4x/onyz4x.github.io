@@ -9,6 +9,8 @@ tags:
 
 因为本人是前端开发人员，已经在用 webstorm，不想在安装一个 Android studio 这么重的 IDE，会导致卡顿，所以想使用 vscode 安装 flutter 插件作为开发工具，只安装 android-sdk
 
+<!--more-->
+
 ## 安装环境
 
 首先准备一个文件夹专门用来放 sdk，命名`Android`，把所有环境有关的 sdk 都可以装到这里方便管理。

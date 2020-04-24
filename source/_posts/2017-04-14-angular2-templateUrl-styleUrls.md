@@ -10,6 +10,8 @@ categories:
 
 在跟随 angular 官方教程练习的过程中发现一个问题，关于`@Component`[装饰器](https://www.angular.cn/docs/ts/latest/glossary.html#decorator ""decorator" explained")<span class="ng-scope">函数中 templateUrl 和 styleUrls 路径的问题，具体表现为</span>
 
+<!--more-->
+
 &nbsp;
 
 在教程中 templateUrl 和 styleUrls 中引用的模板路径都是类似

@@ -17,6 +17,8 @@ yeoman 是一个脚手架工具，而 generator-angular 就是 Yeoman generator 
 
 &nbsp;
 
+<!--more-->
+
 ### 安装
 
 首先 yeoman 是 nodejs 下的工具，所以肯定要有 nodejs 和 npm
