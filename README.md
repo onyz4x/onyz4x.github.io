@@ -1,19 +1,26 @@
-**Start the server**
+**本地运行**
 
 ``` bash
 $ hexo server
 ```
 
-**Create a new post**
+**新建文章**
 
 ``` bash
 $ hexo new "Hello Hexo"
 ```
 
-**Generate static files**
+**编译**
 
 ``` bash
 $ hexo generate
+或
+yarn run build
+```
+**部署**
+
+``` bash
+yarn run deploy
 ```
 
 ## More Information

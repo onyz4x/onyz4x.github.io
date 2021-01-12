@@ -99,5 +99,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/onyz4x/onyz4x.github.io
+  repo: git@github.com:onyz4x/onyz4x.github.io.git
   branch: master
