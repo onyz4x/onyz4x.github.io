@@ -203,16 +203,16 @@
 
       
         <p>因为本人是前端开发人员，已经在用 webstorm，不想在安装一个 Android studio 这么重的 IDE，会导致卡顿，所以想使用 vscode 安装 flutter 插件作为开发工具，只安装 android-sdk</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p>首先准备一个文件夹专门用来放 sdk，命名<code>Android</code>，把所有环境有关的 sdk 都可以装到这里方便管理。</p>
 <p>注意：Android 文件夹不要使用<code>C:\Program Files\</code>这种需要权限的路径</p>
-<h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p><a href="https://github.com/AdoptOpenJDK/openjdk8-binaries/releases" target="_blank" rel="noopener">https://github.com/AdoptOpenJDK/openjdk8-binaries/releases</a></p>
+<h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p><a target="_blank" rel="noopener" href="https://github.com/AdoptOpenJDK/openjdk8-binaries/releases">https://github.com/AdoptOpenJDK/openjdk8-binaries/releases</a></p>
 <p>选择 OpenJDK8U-jdk_x64_windows_hotspot_8u252b09.msi 或者 OpenJDK8U-jdk_x64_windows_hotspot_8u252b09.zip 下载</p>
 <p>msi 安装的时候选中生成环境变量 JAVA_HOME；zip 格式的可以解压到<code>Android</code>目录，然后自己去添加环境变量 JAVA_HOME</p>
-<h3 id="Flutter-Sdk"><a href="#Flutter-Sdk" class="headerlink" title="Flutter Sdk"></a>Flutter Sdk</h3><p><a href="https://flutter.dev/docs/get-started/install/windows#get-the-flutter-sdk" target="_blank" rel="noopener">https://flutter.dev/docs/get-started/install/windows#get-the-flutter-sdk</a></p>
+<h3 id="Flutter-Sdk"><a href="#Flutter-Sdk" class="headerlink" title="Flutter Sdk"></a>Flutter Sdk</h3><p><a target="_blank" rel="noopener" href="https://flutter.dev/docs/get-started/install/windows#get-the-flutter-sdk">https://flutter.dev/docs/get-started/install/windows#get-the-flutter-sdk</a></p>
 <p>flutter 官方文档，注意路径为<code>Android/flutter</code></p>
-<h3 id="Android-SDK"><a href="#Android-SDK" class="headerlink" title="Android SDK"></a>Android SDK</h3><h4 id="1-Android-command-tools-Android-sdk-tool"><a href="#1-Android-command-tools-Android-sdk-tool" class="headerlink" title="1. Android command tools(Android-sdk-tool)"></a>1. Android command tools(Android-sdk-tool)</h4><p><a href="https://developer.android.com/studio#command-tools" target="_blank" rel="noopener">https://developer.android.com/studio#command-tools</a></p>
+<h3 id="Android-SDK"><a href="#Android-SDK" class="headerlink" title="Android SDK"></a>Android SDK</h3><h4 id="1-Android-command-tools-Android-sdk-tool"><a href="#1-Android-command-tools-Android-sdk-tool" class="headerlink" title="1. Android command tools(Android-sdk-tool)"></a>1. Android command tools(Android-sdk-tool)</h4><p><a target="_blank" rel="noopener" href="https://developer.android.com/studio#command-tools">https://developer.android.com/studio#command-tools</a></p>
 <h5 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h5><blockquote>
 <p>这里有个巨大的坑， 我下载的<code>commandlinetools-win-6200805_latest.zip</code>解压<code>tools</code>文件放到<code>Android</code>目录下后，环境变量中添加<code>Android/tools/bin</code>运行 sdkmanager 会不正常，原因是新版的路径必须是<code>Android\cmdline-tools\latest</code>下，但是<code>Android\cmdline-tools\latest</code>这个路径会导致另外一个问题<code>flutter doctor --licenses</code>命令在解决授权问题的时候找不到 sdkmanger。这个坑以后 flutter 更新版本后可能会解决掉，但是现在只能 work around</p>
 </blockquote>

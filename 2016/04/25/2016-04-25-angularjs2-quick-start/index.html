@@ -213,8 +213,8 @@
 
       
         <p>让我们从零开始使用 JavaScript 建立一个超简单的 Angular2 应用，还可以使用 TypeScript 和 Dart</p>
-<h2 id="看看运行效果"><a href="#看看运行效果" class="headerlink" title="看看运行效果"></a>看看运行效果</h2><p>运行<a href="https://angular.io/resources/live-examples/quickstart/js/plnkr.html/" target="_blank" rel="noopener">在线示例</a>能快速看到看到 Angular 2 应用的实例，运行结果如下图：</p>
-<a id="more"></a>
+<h2 id="看看运行效果"><a href="#看看运行效果" class="headerlink" title="看看运行效果"></a>看看运行效果</h2><p>运行<a target="_blank" rel="noopener" href="https://angular.io/resources/live-examples/quickstart/js/plnkr.html/">在线示例</a>能快速看到看到 Angular 2 应用的实例，运行结果如下图：</p>
+<span id="more"></span>
 
 <p>文件目录结构如下</p>
 <p><img src="http://www.ziwuo.com/wp-content/uploads/2016/04/QQ%E6%88%AA%E5%9B%BE20160505105117.jpg" alt=""></p>
@@ -243,7 +243,7 @@
 </blockquote>
 <p>打开一个 terminal 窗口（Windows 系统在 cmd 中打开）运行下面的 npm 命令</em></p>
 <blockquote>
-<p><a href="http://www.ziwuo.com/archives/24.html" target="_blank" rel="noopener">AngularJS,自定义 filter 实现文字和拼音的双过滤</a> 在安装过程中可能会出现红色错误消息。 别理他们。安装会成功。请参阅下面的附录以获取更多信息。</p>
+<p><a target="_blank" rel="noopener" href="http://www.ziwuo.com/archives/24.html">AngularJS,自定义 filter 实现文字和拼音的双过滤</a> 在安装过程中可能会出现红色错误消息。 别理他们。安装会成功。请参阅下面的附录以获取更多信息。</p>
 </blockquote>
 <h2 id="我们的第一个-Angular-组件"><a href="#我们的第一个-Angular-组件" class="headerlink" title="我们的第一个 Angular 组件"></a>我们的第一个 Angular 组件</h2><p>组件是最基本的 Angular 概念。组件管理着视图。</p>
 <p>从技术上讲，一个组件是控制视图模板的类。在因为 Angular 应用中我们会建立很多组件。这是我们的第一次尝试，所以我们做一个简单的。</p>
@@ -260,17 +260,17 @@
 <p>大多数应用程序文件通过添加东西到命名空间输出这个东西。例如我们的 app.component.js 文件输出 AppComponent。</p>
 <p>更复杂的应用会有 AppComponent 的子组件。一个更复杂的应用程序将有更多的文件和模块。</p>
 <p>这个快速入门应用是很简单的;只有一个我们需要的组件。但是模块依然在这样一个小小的应用程序发挥了一个基本的组织作用。</p>
-<p>模块依赖于其他模块。在 JavaScript <a href="http://loyal-friend.de/2015/05/11-september-2008/" target="_blank" rel="noopener">11.</a> Angular 应用中，当我们需要另一个模块提供的东西，我们从 app 对象获取它。当另一个模块涉及到 AppComponent，它从 app.AppComponent 中获取它。</p>
+<p>模块依赖于其他模块。在 JavaScript <a target="_blank" rel="noopener" href="http://loyal-friend.de/2015/05/11-september-2008/">11.</a> Angular 应用中，当我们需要另一个模块提供的东西，我们从 app 对象获取它。当另一个模块涉及到 AppComponent，它从 app.AppComponent 中获取它。</p>
 <p>Angular 本身也是模块化的。它是一个库模块的集合。每个库本身由一些相关的功能模块组成。</p>
 <p>当我们需要 Angular 的某些东西，我们用 ng 对象来获取。</p>
 <h3 id="The-Class-definition-object-类定义对象"><a href="#The-Class-definition-object-类定义对象" class="headerlink" title="The Class definition object?类定义对象"></a>The Class definition object?类定义对象</h3><p>在文件的底部是一个空的、不做任何事情的类定义对象。当我们准备好建立一个独立应用，我们以用属性和应用逻辑来扩展此对象。在快速入门中我们 AppComponent 类只有一个空的构造，是因为我们不需要它在这个快速入门中做任何事情。</p>
 <h3 id="The-Component-definition-object-组件定义对象"><a href="#The-Component-definition-object-组件定义对象" class="headerlink" title="The Component definition object?组件定义对象"></a>The Component definition object?组件定义对象</h3><p>ng.core.Component()告诉 Angular 这个类定义对象是一个 Angular 组件。配置对象传递给 ng.core.Component()方法两个字段，一个 selector 和一个 template。</p>
 <p>selector 为名为 my-app 的 HTML 元素指定一个简单的 CSS 选择器。Angular 无论在 HTML 中哪里遇到 my-app 元素就会创建和显示 AppComponent 实例 。</p>
 <blockquote>
-<p><a href="http://www.managing-it.nl/management-artikelen/teamwork/een-tevreden-team-is-een-sterk-team/" target="_blank" rel="noopener">Een</a> 记住 my-app 选择器，我们会在编写 index.html 中用到</p>
+<p><a target="_blank" rel="noopener" href="http://www.managing-it.nl/management-artikelen/teamwork/een-tevreden-team-is-een-sterk-team/">Een</a> 记住 my-app 选择器，我们会在编写 index.html 中用到</p>
 </blockquote>
 <blockquote>
-<p><a href="http://www.cheapelitejerseys.us.com" target="_blank" rel="noopener">cheap nba jerseys</a> 模板属性保存组件的同步模板。模板是 HTML 的一种形式，它告诉 Angular 如何呈现一个视图。我们的模板是一个单行的 HTML 显示“My First Angular App”。</p>
+<p><a target="_blank" rel="noopener" href="http://www.cheapelitejerseys.us.com">cheap nba jerseys</a> 模板属性保存组件的同步模板。模板是 HTML 的一种形式，它告诉 Angular 如何呈现一个视图。我们的模板是一个单行的 HTML 显示“My First Angular App”。</p>
 </blockquote>
 <blockquote>
 <p>现在我们需要一些东西来告诉 Angular 来加载这个组件。</p>
@@ -283,7 +283,7 @@
 </ul>
 <p>两个东西都在我们的“命名空间”里。引导它，传递到根组件类型，AppComponent。</p>
 <blockquote>
-<p>了解为什么引到和 main.js 的详情点击<a href="https://angular.io/docs/js/latest/quickstart.html#main" target="_blank" rel="noopener">链接</a></p>
+<p>了解为什么引到和 main.js 的详情点击<a target="_blank" rel="noopener" href="https://angular.io/docs/js/latest/quickstart.html#main">链接</a></p>
 </blockquote>
 <p>我们要求 Angular 在浏览器启动应用程序与我们的根组件。Angular 会放在哪里呢？</p>
 <h2 id="添加-index-html-文件"><a href="#添加-index-html-文件" class="headerlink" title="添加 index.html 文件"></a>添加 index.html 文件</h2><p>Angular 会在 index.html 的特定位置的显示我们的应用程序。现在是时候创建这个文件。</p>
@@ -303,7 +303,7 @@
 <blockquote>
 <p>如果你一直看到 loading&#8230;界面，查看 ES2015 的浏览器支持</p>
 </blockquote>
-<h3 id="做一些改动"><a href="#做一些改动" class="headerlink" title="做一些改动"></a>做一些改动</h3><p>尝试更改消息为“My SECOND <a href="http://www.ziwuo.com/archives/6.html" target="_blank" rel="noopener">前端编码规范</a> Angular 2 app”</p>
+<h3 id="做一些改动"><a href="#做一些改动" class="headerlink" title="做一些改动"></a>做一些改动</h3><p>尝试更改消息为“My SECOND <a target="_blank" rel="noopener" href="http://www.ziwuo.com/archives/6.html">前端编码规范</a> Angular 2 app”</p>
 <p>lite-server 会一直监听，当检测到变化，会刷新浏览器，并显示修改后的消息。</p>
 <p>这是开发一个应用程序的一个很巧妙的方法！</p>
 <p>关闭终端窗口，当我们完成终止服务器。</p>
@@ -312,11 +312,11 @@
 <p><img src="http://www.ziwuo.com/wp-content/uploads/2016/04/QQ%E6%88%AA%E5%9B%BE20160504153700.jpg" alt=""></p>
 <p>所有的文件：</p>
 <h2 id="Wrap-Up-打包"><a href="#Wrap-Up-打包" class="headerlink" title="Wrap Up ?打包"></a>Wrap Up ?打包</h2><p>我们的第一个应用程序不会去做太多。它基本上是 Angular2 版本的“Hello, World”?。</p>
-<p>我们保持了它的简洁：编写一个小 Angular 组件，给 index.html 增加了一些 JavaScript 库，用一个静态文件服务器启动。这就是预期的“Hello, <a href="http://philadelphiaeaglesjerseyspop.forumcity.com/viewtopic.php?p=20#20" target="_blank" rel="noopener">Online</a> World”应用程序需要做的。</p>
+<p>我们保持了它的简洁：编写一个小 Angular 组件，给 index.html 增加了一些 JavaScript 库，用一个静态文件服务器启动。这就是预期的“Hello, <a target="_blank" rel="noopener" href="http://philadelphiaeaglesjerseyspop.forumcity.com/viewtopic.php?p=20#20">Online</a> World”应用程序需要做的。</p>
 <p>但是我们需要 Angular2 做的更多。</p>
 <p>好消息是，大部分设置我们可以丢到脑后。我们可能只会触及 package.json 的更新。除了为我们的应用“模块”增加脚本文件，我们很可能只有当我们需要添加一个库或 CSS 样式表才会打开 index.html。</p>
 <p>下一步，构建一个小的应用程序演示，用 Angular2 建立更好的东西。</p>
-<p><a href="https://angular.io/docs/js/latest/tutorial" target="_blank" rel="noopener">加入我们的英雄教程之旅！</a></p>
+<p><a target="_blank" rel="noopener" href="https://angular.io/docs/js/latest/tutorial">加入我们的英雄教程之旅！</a></p>
 <h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>这章由几部分快速阐述几个重要点</p>
 <p>这里没有详细的资料，如果你好奇可以继续查阅。</p>
 <div class="l-main-section">
@@ -332,7 +332,7 @@
 <p>以后为了提升产品质量（载入时间，内存占用）我们会做出不同的选择</p>
 <h3 id="附录：-package-json"><a href="#附录：-package-json" class="headerlink" title="附录： package.json"></a>附录： package.json</h3><p>npm 是一个流行的包管理器，Angular 应用开发者依靠它获得和管理应用依赖的库。</p>
 <p>我们在 npm 中指定我们需要的库文件 package.json.</p>
-<p>The Angular team suggests the packages listed <a href="http://www.newenglandpatriotsjerseyspop.com" target="_blank" rel="noopener">wholesale nfl jerseys</a> in the <code>dependencies</code> and <code>devDependencies</code> sections listed <a href="http://www.dallascowboysjerseyspop.com" target="_blank" rel="noopener">wholesale mlb jerseys</a> in this file:</p>
+<p>The Angular team suggests the packages listed <a target="_blank" rel="noopener" href="http://www.newenglandpatriotsjerseyspop.com">wholesale nfl jerseys</a> in the <code>dependencies</code> and <code>devDependencies</code> sections listed <a target="_blank" rel="noopener" href="http://www.dallascowboysjerseyspop.com">wholesale mlb jerseys</a> in this file:</p>
 <p>Angular 官方建议把包的清单列入文件的 dependencies 和 devDependencies 部分：</p>
 <blockquote>
 <p>还有一些其他的包可供选择。我们推荐这个很好使用的专门设置。现在和我们一起使用吧。以后可以随意替换来适应你的习惯和经验。</p>
@@ -364,7 +364,7 @@
 </li>
 <li><p>关系的分离</p>
 </li>
-<li><p><a href="http://profservis59.ru/717-2/" target="_blank" rel="noopener">Федоровна</a> 我们学习到导入和导出</p>
+<li><p><a target="_blank" rel="noopener" href="http://profservis59.ru/717-2/">Федоровна</a> 我们学习到导入和导出</p>
 </li>
 </ol>
 <h4 id="这很简单"><a href="#这很简单" class="headerlink" title="这很简单"></a>这很简单</h4><p>虽然这是额外的步骤和文件，但是能有多难呢？</p>

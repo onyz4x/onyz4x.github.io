@@ -210,8 +210,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>在跟随 angular 官方教程练习的过程中发现一个问题，关于<code>@Component</code>[装饰器](<a href="https://www.angular.cn/docs/ts/latest/glossary.html#decorator" target="_blank" rel="noopener">https://www.angular.cn/docs/ts/latest/glossary.html#decorator</a> “”decorator” explained”)<span class="ng-scope">函数中 templateUrl 和 styleUrls 路径的问题，具体表现为</span></p>
-<a id="more"></a>
+        <p>在跟随 angular 官方教程练习的过程中发现一个问题，关于<code>@Component</code>[装饰器](<a target="_blank" rel="noopener" href="https://www.angular.cn/docs/ts/latest/glossary.html#decorator">https://www.angular.cn/docs/ts/latest/glossary.html#decorator</a> “”decorator” explained”)<span class="ng-scope">函数中 templateUrl 和 styleUrls 路径的问题，具体表现为</span></p>
+<span id="more"></span>
 
 <p>&nbsp;</p>
 <p>在教程中 templateUrl 和 styleUrls 中引用的模板路径都是类似</p>
@@ -219,11 +219,11 @@
     &lt;span class="hljs-attribute">styleUrls&lt;/span>: &lt;span class="hljs-string">['./heroes.component.css']&lt;/span></code></pre>
 
 <p>但是实际上如果定义了 moduleId，就会出现 404 的问题，找不到文件</p>
-<pre class="hljs ruby"><code>&lt;span class="hljs-variable">@component&lt;/span>({
+<pre class="hljs ruby"><code>&lt;span class="hljs-variable">@component&lt;/span>(&#123;
     &lt;span class="hljs-symbol">moduleId:&lt;/span> &lt;span class="hljs-class">&lt;span class="hljs-keyword">module&lt;/span>.&lt;span class="hljs-title">id&lt;/span>&lt;/span>
     ...
     ...
-})</code></pre>
+&#125;)</code></pre>
 
 <p><img src="https://sfault-image.b0.upaiyun.com/705/487/705487986-58eddef99c310_articlex" alt=""></p>
 <p>这时候只能把文件路径改成如下，才能正确加载</p>
@@ -242,14 +242,14 @@
 <p>&nbsp;</p>
 <p>从官方教程的代码中可以看到模块加载器是 systemjs</p>
 <p>首先参考官方的文档</p>
-<p>-组件样式：<a href="https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html" target="_blank" rel="noopener">https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html</a></p>
-<p>-相对于组件的路径：<a href="https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html" target="_blank" rel="noopener">https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html</a></p>
+<p>-组件样式：<a target="_blank" rel="noopener" href="https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html">https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html</a></p>
+<p>-相对于组件的路径：<a target="_blank" rel="noopener" href="https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html">https://angular.cn/docs/ts/latest/cookbook/component-relative-paths.html</a></p>
 <p>&nbsp;</p>
 <p>从上面两个文档中，我们知道的是 Angular 不可能知道在运行期这些文件的正确位置，Angular 能够确定的唯一的位置是首页<code>index.html</code>的 URL，也就是应用的根目录。 所以，默认情况下，它只能计算相对于<code>index.html</code>的模板和样式表路径。 这就是为什么我们以前用<code>app/</code>基准路径的前缀来写文件的 URL。Angular 应用可能被用多种方式加载：独立文件、SystemJS 包、CommonJS 包等等。 用来生成模块的格式可以是任何格式。 甚至可能完全没有写成模块化代码。</p>
 <p>&nbsp;</p>
 <p>但是这里并没有详细解释为什么 systemjs 打包运行的情况下用 moduleId 出现的问题</p>
 <p>而后另外一篇文章才有详细说明</p>
-<p><a href="https://blog.thoughtram.io/angular/2016/06/08/component-relative-paths-in-angular-2.html" target="_blank" rel="noopener">https://blog.thoughtram.io/angular/2016/06/08/component-relative-paths-in-angular-2.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.thoughtram.io/angular/2016/06/08/component-relative-paths-in-angular-2.html">https://blog.thoughtram.io/angular/2016/06/08/component-relative-paths-in-angular-2.html</a></p>
 <p>里面介绍了几种不同的打包模块下的写法</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
